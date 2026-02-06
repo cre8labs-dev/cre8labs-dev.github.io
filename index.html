@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cre8 Labs - Mobile Games Studio</title>
+    <title>Cre8 Labs - Mobile Apps & Games</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -52,7 +52,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             padding: 60px 20px 40px;
             text-align: center;
         }
@@ -70,12 +69,27 @@
         .tagline {
             color: #8A93A6;
             font-size: 18px;
-            margin-bottom: 48px;
+            margin-bottom: 40px;
         }
 
+        /* About Us */
+        .about-section {
+            width: 100%;
+            max-width: 560px;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .about-section p {
+            color: #B0B8C4;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Apps */
         .apps-section {
             width: 100%;
-            max-width: 480px;
+            max-width: 560px;
             margin-bottom: 48px;
         }
 
@@ -87,6 +101,12 @@
             margin-bottom: 16px;
         }
 
+        .app-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
         .app-card {
             background: #1A1F26;
             border: 1px solid #2D3440;
@@ -95,11 +115,39 @@
             text-align: left;
         }
 
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .app-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .badge-live {
+            background: rgba(40, 167, 69, 0.15);
+            color: #4ADE80;
+            border: 1px solid rgba(40, 167, 69, 0.3);
+        }
+
+        .badge-dev {
+            background: rgba(45, 107, 255, 0.15);
+            color: #6B9BFF;
+            border: 1px solid rgba(45, 107, 255, 0.3);
+        }
+
         .app-name {
             font-size: 20px;
             font-weight: 700;
             color: #FFFFFF;
-            margin-bottom: 4px;
         }
 
         .app-desc {
@@ -125,6 +173,13 @@
             color: #FFD100;
         }
 
+        .app-links .coming-soon {
+            color: #5A6370;
+            font-size: 13px;
+            font-style: italic;
+        }
+
+        /* Contact */
         .contact-section {
             margin-bottom: 24px;
         }
@@ -176,29 +231,63 @@
         </div>
 
         <p class="tagline">
-            <span data-en="We build mobile games" data-es="Creamos juegos m&#243;viles"></span>
+            <span data-en="We build mobile apps &amp; games" data-es="Creamos apps y juegos m&#243;viles"></span>
         </p>
 
+        <!-- About Us -->
+        <div class="about-section">
+            <p class="section-title">
+                <span data-en="About Us" data-es="Sobre Nosotros"></span>
+            </p>
+            <p>
+                <span data-en="Cre8 Labs is an indie studio focused on building mobile applications and games. From strategy games to health care tools, we design experiences that are offline-first, privacy-respectful, and built to last." data-es="Cre8 Labs es un estudio indie enfocado en crear aplicaciones y juegos m&#243;viles. Desde juegos de estrategia hasta herramientas de salud, dise&#241;amos experiencias que funcionan offline, respetan la privacidad y est&#225;n hechas para durar."></span>
+            </p>
+        </div>
+
+        <!-- Our Apps -->
         <div class="apps-section">
             <p class="section-title">
                 <span data-en="Our Apps" data-es="Nuestras Apps"></span>
             </p>
-            <div class="app-card">
-                <div class="app-name">Rally Team Manager</div>
-                <p class="app-desc">
-                    <span data-en="A rally team management strategy game. Plan tactics, manage your budget, hire staff, and compete across a 78-stage WRC-style championship." data-es="Un juego de estrategia de gesti&#243;n de equipo de rally. Planifica t&#225;cticas, administra tu presupuesto, contrata personal y compite en un campeonato estilo WRC de 78 etapas."></span>
-                </p>
-                <div class="app-links">
-                    <a href="rally-team-manager/privacy-policy.html">
-                        <span data-en="Privacy Policy" data-es="Pol&#237;tica de Privacidad"></span>
-                    </a>
-                    <a href="rally-team-manager/terms.html">
-                        <span data-en="Terms of Service" data-es="T&#233;rminos de Servicio"></span>
-                    </a>
+            <div class="app-cards">
+
+                <!-- Rally Team Manager -->
+                <div class="app-card">
+                    <div class="app-header">
+                        <div class="app-name">Rally Team Manager</div>
+                        <span class="app-badge badge-live"><span data-en="Live" data-es="Activa"></span></span>
+                    </div>
+                    <p class="app-desc">
+                        <span data-en="A rally team management strategy game. Plan tactics, manage your budget, hire staff, and compete across a 78-stage WRC-style championship." data-es="Un juego de estrategia de gesti&#243;n de equipo de rally. Planifica t&#225;cticas, administra tu presupuesto, contrata personal y compite en un campeonato estilo WRC de 78 etapas."></span>
+                    </p>
+                    <div class="app-links">
+                        <a href="rally-team-manager/privacy-policy.html">
+                            <span data-en="Privacy Policy" data-es="Pol&#237;tica de Privacidad"></span>
+                        </a>
+                        <a href="rally-team-manager/terms.html">
+                            <span data-en="Terms of Service" data-es="T&#233;rminos de Servicio"></span>
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Health Care App (Coming Soon) -->
+                <div class="app-card">
+                    <div class="app-header">
+                        <div class="app-name"><span data-en="Health Care App" data-es="App de Salud"></span></div>
+                        <span class="app-badge badge-dev"><span data-en="In Development" data-es="En Desarrollo"></span></span>
+                    </div>
+                    <p class="app-desc">
+                        <span data-en="A mobile health care application. More details coming soon." data-es="Una aplicaci&#243;n m&#243;vil de salud. M&#225;s detalles pr&#243;ximamente."></span>
+                    </p>
+                    <div class="app-links">
+                        <span class="coming-soon"><span data-en="Coming soon" data-es="Pr&#243;ximamente"></span></span>
+                    </div>
+                </div>
+
             </div>
         </div>
 
+        <!-- Contact -->
         <div class="contact-section">
             <h2><span data-en="Contact" data-es="Contacto"></span></h2>
             <a class="contact-email" href="mailto:cre8labs.dev@gmail.com">cre8labs.dev@gmail.com</a>
@@ -221,7 +310,6 @@
             localStorage.setItem('cre8labs-lang', lang);
         }
 
-        // Init: use saved language or browser default
         (function() {
             var saved = localStorage.getItem('cre8labs-lang');
             var lang = saved || (navigator.language.startsWith('es') ? 'es' : 'en');
