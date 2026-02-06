@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cre8 Labs - Mobile Games Studio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #0E1116;
+            color: #E0E0E0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lang-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+            display: flex;
+            gap: 4px;
+            background: #1A1F26;
+            border: 1px solid #2D3440;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        .lang-btn {
+            padding: 4px 12px;
+            border: none;
+            background: transparent;
+            color: #8A93A6;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: #FFD100;
+            color: #0E1116;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+
+        .logo span:first-child { color: #FFD100; }
+        .logo span:last-child { color: #FFFFFF; }
+
+        .tagline {
+            color: #8A93A6;
+            font-size: 18px;
+            margin-bottom: 48px;
+        }
+
+        .apps-section {
+            width: 100%;
+            max-width: 480px;
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #5A6370;
+            margin-bottom: 16px;
+        }
+
+        .app-card {
+            background: #1A1F26;
+            border: 1px solid #2D3440;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: left;
+        }
+
+        .app-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 4px;
+        }
+
+        .app-desc {
+            font-size: 14px;
+            color: #8A93A6;
+            margin-bottom: 16px;
+        }
+
+        .app-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .app-links a {
+            color: #2D6BFF;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .app-links a:hover {
+            color: #FFD100;
+        }
+
+        .contact-section {
+            margin-bottom: 24px;
+        }
+
+        .contact-section h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #5A6370;
+            margin-bottom: 12px;
+        }
+
+        .contact-email {
+            color: #FFD100;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .contact-email:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px 20px;
+            border-top: 1px solid #1A1F26;
+            color: #5A6370;
+            font-size: 13px;
+        }
+
+        @media (max-width: 480px) {
+            .logo { font-size: 36px; }
+            .tagline { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+
+    <main>
+        <div class="logo">
+            <span>Cre8</span> <span>Labs</span>
+        </div>
+
+        <p class="tagline">
+            <span data-en="We build mobile games" data-es="Creamos juegos m&#243;viles"></span>
+        </p>
+
+        <div class="apps-section">
+            <p class="section-title">
+                <span data-en="Our Apps" data-es="Nuestras Apps"></span>
+            </p>
+            <div class="app-card">
+                <div class="app-name">Rally Team Manager</div>
+                <p class="app-desc">
+                    <span data-en="A rally team management strategy game. Plan tactics, manage your budget, hire staff, and compete across a 78-stage WRC-style championship." data-es="Un juego de estrategia de gesti&#243;n de equipo de rally. Planifica t&#225;cticas, administra tu presupuesto, contrata personal y compite en un campeonato estilo WRC de 78 etapas."></span>
+                </p>
+                <div class="app-links">
+                    <a href="rally-team-manager/privacy-policy.html">
+                        <span data-en="Privacy Policy" data-es="Pol&#237;tica de Privacidad"></span>
+                    </a>
+                    <a href="rally-team-manager/terms.html">
+                        <span data-en="Terms of Service" data-es="T&#233;rminos de Servicio"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2><span data-en="Contact" data-es="Contacto"></span></h2>
+            <a class="contact-email" href="mailto:cre8labs.dev@gmail.com">cre8labs.dev@gmail.com</a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Cre8 Labs. <span data-en="All rights reserved." data-es="Todos los derechos reservados."></span>
+    </footer>
+
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('[data-en]').forEach(function(el) {
+                el.textContent = el.getAttribute('data-' + lang);
+            });
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+            });
+            document.documentElement.lang = lang;
+            localStorage.setItem('cre8labs-lang', lang);
+        }
+
+        // Init: use saved language or browser default
+        (function() {
+            var saved = localStorage.getItem('cre8labs-lang');
+            var lang = saved || (navigator.language.startsWith('es') ? 'es' : 'en');
+            setLang(lang);
+        })();
+    </script>
+</body>
+</html>

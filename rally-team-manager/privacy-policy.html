@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Rally Team Manager | Cre8 Labs</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #0E1116;
+            color: #E0E0E0;
+            line-height: 1.7;
+        }
+
+        .lang-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+            display: flex;
+            gap: 4px;
+            background: #1A1F26;
+            border: 1px solid #2D3440;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        .lang-btn {
+            padding: 4px 12px;
+            border: none;
+            background: transparent;
+            color: #8A93A6;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: #FFD100;
+            color: #0E1116;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px 40px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 24px;
+        }
+
+        .breadcrumb a {
+            color: #2D6BFF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb a:hover { color: #FFD100; }
+
+        .breadcrumb span { color: #5A6370; font-size: 14px; }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #8A93A6;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FFD100;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #1A1F26;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p { margin-bottom: 14px; }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 14px;
+        }
+
+        li { margin-bottom: 6px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #2D3440;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #1A1F26;
+            color: #FFD100;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) { background: rgba(26, 31, 38, 0.5); }
+
+        .callout {
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            border-left: 4px solid;
+        }
+
+        .callout-success {
+            background: rgba(40, 167, 69, 0.1);
+            border-color: #28a745;
+        }
+
+        .callout-warning {
+            background: rgba(255, 193, 7, 0.1);
+            border-color: #ffc107;
+        }
+
+        .callout-danger {
+            background: rgba(220, 53, 69, 0.1);
+            border-color: #dc3545;
+        }
+
+        a { color: #2D6BFF; text-decoration: none; }
+        a:hover { color: #FFD100; }
+
+        code {
+            background: #1A1F26;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .contact-box {
+            background: #1A1F26;
+            border: 1px solid #2D3440;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px 20px;
+            border-top: 1px solid #1A1F26;
+            color: #5A6370;
+            font-size: 13px;
+            margin-top: 40px;
+        }
+
+        .lang-en, .lang-es { display: none; }
+        body.en .lang-en { display: block; }
+        body.es .lang-es { display: block; }
+        body.en table.lang-en { display: table; }
+        body.es table.lang-es { display: table; }
+        body.en span.lang-en { display: inline; }
+        body.es span.lang-es { display: inline; }
+        body.en div.lang-en { display: block; }
+        body.es div.lang-es { display: block; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 24px; }
+            h2 { font-size: 18px; }
+            .container { padding: 50px 16px 32px; }
+            table { font-size: 13px; }
+            th, td { padding: 8px; }
+        }
+    </style>
+</head>
+<body class="en">
+
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="../index.html">Cre8 Labs</a>
+            <span> / </span>
+            <span class="lang-en">Rally Team Manager &mdash; Privacy Policy</span>
+            <span class="lang-es">Rally Team Manager &mdash; Pol&iacute;tica de Privacidad</span>
+        </div>
+
+        <!-- ==================== ENGLISH ==================== -->
+        <div class="lang-en">
+
+        <h1>Privacy Policy</h1>
+        <p class="subtitle"><strong>Rally Team Manager</strong> | Last updated: January 26, 2026</p>
+
+        <h2>1. Introduction</h2>
+        <p>Welcome to Rally Team Manager ("we", "our", or "the application"). This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our mobile application.</p>
+        <p>By downloading, installing, or using Rally Team Manager, you accept the practices described in this policy. If you do not agree with this policy, please do not use the application.</p>
+
+        <h2>2. Information We Collect</h2>
+
+        <h3>2.1 Information We Do NOT Collect</h3>
+        <div class="callout callout-success">
+            <p>Rally Team Manager is an offline single-player game. <strong>We do NOT collect:</strong></p>
+            <ul>
+                <li>Names or personal identification information</li>
+                <li>Email addresses</li>
+                <li>Phone numbers</li>
+                <li>GPS location</li>
+                <li>Photos, contacts, or device files</li>
+                <li>Payment or financial information</li>
+                <li>Login credentials</li>
+            </ul>
+        </div>
+
+        <h3>2.2 Automatically Collected Information</h3>
+        <p>To improve the user experience and display advertising, we may automatically collect:</p>
+        <table>
+            <tr><th>Data Type</th><th>Purpose</th><th>Collected By</th></tr>
+            <tr><td>Advertising identifier (IDFA/GAID)</td><td>Display relevant ads</td><td>Google AdMob</td></tr>
+            <tr><td>Device information</td><td>Compatibility and performance</td><td>Google AdMob</td></tr>
+            <tr><td>Ad interaction data</td><td>Ad optimization</td><td>Google AdMob</td></tr>
+            <tr><td>Anonymous usage statistics</td><td>Improve the game</td><td>Internal (optional)</td></tr>
+        </table>
+
+        <h3>2.3 Locally Stored Data</h3>
+        <p>Game progress (saved games, settings, preferences) is stored <strong>only on your device</strong> using secure local storage. This data:</p>
+        <ul>
+            <li>Is not transmitted to external servers</li>
+            <li>Is not accessible by third parties</li>
+            <li>Is deleted when you uninstall the application</li>
+        </ul>
+
+        <h2>3. Advertising</h2>
+
+        <h3>3.1 Google AdMob</h3>
+        <p>Rally Team Manager uses Google AdMob to display ads. AdMob may collect and use data to personalize the ads you see.</p>
+        <p><strong>Types of ads:</strong></p>
+        <ul>
+            <li><strong>Interstitial ads:</strong> Full-screen at natural pause moments</li>
+            <li><strong>Rewarded ads:</strong> Optional videos offering in-game benefits</li>
+        </ul>
+        <p><strong>Data AdMob may collect:</strong></p>
+        <ul>
+            <li>Device and advertising identifiers</li>
+            <li>IP address (for approximate location)</li>
+            <li>Device information (model, operating system)</li>
+            <li>Ad performance data</li>
+        </ul>
+        <p>For more information on how Google uses data:</p>
+        <ul>
+            <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+            <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank">How Google uses information</a></li>
+        </ul>
+
+        <h3>3.2 Advertising Options</h3>
+        <div class="callout callout-warning">
+            <p><strong>On iOS (14.5+):</strong></p>
+            <p>When you first launch the app, you will be asked for permission for ad tracking (App Tracking Transparency). You can change this preference at any time in: <code>Settings &gt; Privacy &gt; Tracking</code></p>
+        </div>
+        <div class="callout callout-warning">
+            <p><strong>On Android:</strong></p>
+            <p>You can opt out of personalized advertising in: <code>Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization</code></p>
+        </div>
+
+        <h2>4. Use of Information</h2>
+        <p>We use the collected information to:</p>
+        <ol>
+            <li><strong>Display advertising:</strong> To keep the application free</li>
+            <li><strong>Improve the service:</strong> Analyze performance and fix bugs</li>
+            <li><strong>Legal compliance:</strong> Comply with applicable legal obligations</li>
+        </ol>
+        <div class="callout callout-danger">
+            <p><strong>We do NOT use the information to:</strong></p>
+            <ul>
+                <li>Sell it to third parties</li>
+                <li>Create identifiable user profiles</li>
+                <li>Send direct marketing communications</li>
+                <li>Make automated decisions that affect you</li>
+            </ul>
+        </div>
+
+        <h2>5. Sharing Information</h2>
+        <p><strong>We do NOT sell your personal information.</strong></p>
+        <p>We may share limited information with:</p>
+        <table>
+            <tr><th>Third Party</th><th>Purpose</th><th>Shared Data</th></tr>
+            <tr><td>Google AdMob</td><td>Advertising</td><td>Ad identifiers, device data</td></tr>
+            <tr><td>Apple/Google</td><td>App distribution</td><td>Anonymous installation data</td></tr>
+        </table>
+
+        <h2>6. Data Security</h2>
+        <p>We implement technical and organizational security measures to protect information:</p>
+        <ul>
+            <li>Game data is stored locally on your device</li>
+            <li>We do not maintain servers with user information</li>
+            <li>Communications with third-party services use encryption (HTTPS/TLS)</li>
+        </ul>
+
+        <h2>7. Children's Privacy</h2>
+        <div class="callout callout-danger">
+            <p>Rally Team Manager is <strong>NOT directed at children under 13 years of age</strong>. We do not intentionally collect personal information from children under 13.</p>
+            <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us so we can take the necessary steps.</p>
+        </div>
+        <p><strong>Age Rating:</strong></p>
+        <ul>
+            <li><strong>iOS:</strong> 4+ (may contain advertising)</li>
+            <li><strong>Android:</strong> PEGI 3 / Everyone (contains ads)</li>
+        </ul>
+
+        <h2>8. Your Rights</h2>
+
+        <h3>8.1 European Union Residents (GDPR)</h3>
+        <ul>
+            <li><strong>Access:</strong> Request what data we hold about you</li>
+            <li><strong>Rectification:</strong> Correct inaccurate data</li>
+            <li><strong>Erasure:</strong> Request deletion of your data</li>
+            <li><strong>Portability:</strong> Receive your data in a structured format</li>
+            <li><strong>Objection:</strong> Object to the processing of your data</li>
+            <li><strong>Restriction:</strong> Limit how we use your data</li>
+        </ul>
+
+        <h3>8.2 California Residents (CCPA)</h3>
+        <ul>
+            <li><strong>Know:</strong> What personal information we collect</li>
+            <li><strong>Delete:</strong> Request deletion of personal information</li>
+            <li><strong>Opt-out:</strong> Of the sale of personal information (we do not sell data)</li>
+            <li><strong>Non-discrimination:</strong> You will not be discriminated against for exercising your rights</li>
+        </ul>
+
+        <h3>8.3 How to Exercise Your Rights</h3>
+        <p>To exercise any of these rights, contact us at: <strong>cre8labs.dev@gmail.com</strong></p>
+        <p>We will respond to your request within 30 days.</p>
+
+        <h2>9. Data Retention</h2>
+        <ul>
+            <li><strong>Local game data:</strong> Retained until you uninstall the application</li>
+            <li><strong>Advertising data:</strong> Managed by Google according to their retention policy</li>
+            <li><strong>Analytics data:</strong> Aggregated and anonymous, retained indefinitely</li>
+        </ul>
+
+        <h2>10. International Transfers</h2>
+        <p>Data processed by Google AdMob may be transferred and stored on servers located outside your country of residence, including the United States.</p>
+        <p>Google complies with applicable data transfer frameworks, including the EU Standard Contractual Clauses.</p>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy periodically. We will notify you of significant changes by:</p>
+        <ul>
+            <li>Updating the "Last updated" date on this page</li>
+            <li>In-app notification (for material changes)</li>
+        </ul>
+
+        <h2>12. Contact</h2>
+        <div class="contact-box">
+            <p>If you have questions, comments, or requests related to this Privacy Policy, you can contact us at:</p>
+            <p><strong>Email:</strong> <a href="mailto:cre8labs.dev@gmail.com">cre8labs.dev@gmail.com</a></p>
+            <p><strong>Developer:</strong> Cre8 Labs</p>
+        </div>
+
+        <h2>13. Additional Regional Information</h2>
+
+        <h3>For users in Argentina</h3>
+        <p>This policy complies with the Personal Data Protection Law No. 25,326. The National Directorate for Personal Data Protection is the supervisory authority.</p>
+
+        <h3>For users in Spain</h3>
+        <p>In accordance with the GDPR, you have the right to file a complaint with the Spanish Data Protection Agency (AEPD).</p>
+
+        <h3>For users in Mexico</h3>
+        <p>This policy complies with the Federal Law on Protection of Personal Data Held by Private Parties. INAI is the competent authority.</p>
+
+        <h2>14. Consent</h2>
+        <p>By using Rally Team Manager, you consent to:</p>
+        <ol>
+            <li>The collection and use of information according to this policy</li>
+            <li>The use of cookies and similar technologies by advertising services</li>
+            <li>The transfer of data to third-party service providers</li>
+        </ol>
+        <p>If you do not consent, please uninstall the application.</p>
+
+        </div>
+
+        <!-- ==================== SPANISH ==================== -->
+        <div class="lang-es">
+
+        <h1>Pol&iacute;tica de Privacidad</h1>
+        <p class="subtitle"><strong>Rally Team Manager</strong> | &Uacute;ltima actualizaci&oacute;n: 26 de enero de 2026</p>
+
+        <h2>1. Introducci&oacute;n</h2>
+        <p>Bienvenido a Rally Team Manager ("nosotros", "nuestro" o "la aplicaci&oacute;n"). Esta Pol&iacute;tica de Privacidad explica c&oacute;mo recopilamos, usamos, divulgamos y protegemos tu informaci&oacute;n cuando utilizas nuestra aplicaci&oacute;n m&oacute;vil.</p>
+        <p>Al descargar, instalar o usar Rally Team Manager, aceptas las pr&aacute;cticas descritas en esta pol&iacute;tica. Si no est&aacute;s de acuerdo con esta pol&iacute;tica, por favor no uses la aplicaci&oacute;n.</p>
+
+        <h2>2. Informaci&oacute;n que Recopilamos</h2>
+
+        <h3>2.1 Informaci&oacute;n que NO recopilamos</h3>
+        <div class="callout callout-success">
+            <p>Rally Team Manager es un juego offline de un solo jugador. <strong>NO recopilamos:</strong></p>
+            <ul>
+                <li>Nombres o informaci&oacute;n de identificaci&oacute;n personal</li>
+                <li>Direcciones de correo electr&oacute;nico</li>
+                <li>N&uacute;meros de tel&eacute;fono</li>
+                <li>Ubicaci&oacute;n GPS</li>
+                <li>Fotos, contactos o archivos del dispositivo</li>
+                <li>Informaci&oacute;n de pago o financiera</li>
+                <li>Credenciales de inicio de sesi&oacute;n</li>
+            </ul>
+        </div>
+
+        <h3>2.2 Informaci&oacute;n recopilada autom&aacute;ticamente</h3>
+        <p>Para mejorar la experiencia del usuario y mostrar publicidad, podemos recopilar autom&aacute;ticamente:</p>
+        <table>
+            <tr><th>Tipo de Dato</th><th>Prop&oacute;sito</th><th>Recopilado Por</th></tr>
+            <tr><td>Identificador de publicidad (IDFA/GAID)</td><td>Mostrar anuncios relevantes</td><td>Google AdMob</td></tr>
+            <tr><td>Informaci&oacute;n del dispositivo</td><td>Compatibilidad y rendimiento</td><td>Google AdMob</td></tr>
+            <tr><td>Datos de interacci&oacute;n con anuncios</td><td>Optimizaci&oacute;n de publicidad</td><td>Google AdMob</td></tr>
+            <tr><td>Estad&iacute;sticas de uso an&oacute;nimas</td><td>Mejorar el juego</td><td>Interno (opcional)</td></tr>
+        </table>
+
+        <h3>2.3 Datos almacenados localmente</h3>
+        <p>El progreso del juego (partidas guardadas, configuraci&oacute;n, preferencias) se almacena <strong>&uacute;nicamente en tu dispositivo</strong> usando almacenamiento local seguro. Estos datos:</p>
+        <ul>
+            <li>No se transmiten a servidores externos</li>
+            <li>No son accesibles por terceros</li>
+            <li>Se eliminan al desinstalar la aplicaci&oacute;n</li>
+        </ul>
+
+        <h2>3. Publicidad</h2>
+
+        <h3>3.1 Google AdMob</h3>
+        <p>Rally Team Manager utiliza Google AdMob para mostrar anuncios. AdMob puede recopilar y usar datos para personalizar los anuncios que ves.</p>
+        <p><strong>Tipos de anuncios:</strong></p>
+        <ul>
+            <li><strong>Anuncios intersticiales:</strong> Pantalla completa en momentos naturales de pausa</li>
+            <li><strong>Anuncios con recompensa:</strong> Videos opcionales que ofrecen beneficios en el juego</li>
+        </ul>
+        <p><strong>Datos que AdMob puede recopilar:</strong></p>
+        <ul>
+            <li>Identificadores de dispositivo y publicidad</li>
+            <li>Direcci&oacute;n IP (para ubicaci&oacute;n aproximada)</li>
+            <li>Informaci&oacute;n del dispositivo (modelo, sistema operativo)</li>
+            <li>Datos de rendimiento de anuncios</li>
+        </ul>
+        <p>Para m&aacute;s informaci&oacute;n sobre c&oacute;mo Google usa los datos:</p>
+        <ul>
+            <li><a href="https://policies.google.com/privacy" target="_blank">Pol&iacute;tica de Privacidad de Google</a></li>
+            <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank">C&oacute;mo Google usa la informaci&oacute;n</a></li>
+        </ul>
+
+        <h3>3.2 Opciones de Publicidad</h3>
+        <div class="callout callout-warning">
+            <p><strong>En iOS (14.5+):</strong></p>
+            <p>Al iniciar la aplicaci&oacute;n por primera vez, se te pedir&aacute; permiso para el seguimiento de anuncios (App Tracking Transparency). Puedes cambiar esta preferencia en: <code>Configuraci&oacute;n &gt; Privacidad &gt; Seguimiento</code></p>
+        </div>
+        <div class="callout callout-warning">
+            <p><strong>En Android:</strong></p>
+            <p>Puedes optar por no recibir publicidad personalizada en: <code>Configuraci&oacute;n &gt; Google &gt; Anuncios &gt; Desactivar personalizaci&oacute;n de anuncios</code></p>
+        </div>
+
+        <h2>4. Uso de la Informaci&oacute;n</h2>
+        <p>Utilizamos la informaci&oacute;n recopilada para:</p>
+        <ol>
+            <li><strong>Mostrar publicidad:</strong> Para mantener la aplicaci&oacute;n gratuita</li>
+            <li><strong>Mejorar el servicio:</strong> Analizar el rendimiento y corregir errores</li>
+            <li><strong>Cumplimiento legal:</strong> Cumplir con obligaciones legales aplicables</li>
+        </ol>
+        <div class="callout callout-danger">
+            <p><strong>NO utilizamos la informaci&oacute;n para:</strong></p>
+            <ul>
+                <li>Venderla a terceros</li>
+                <li>Crear perfiles de usuario identificables</li>
+                <li>Enviar comunicaciones de marketing directo</li>
+                <li>Tomar decisiones automatizadas que te afecten</li>
+            </ul>
+        </div>
+
+        <h2>5. Compartir Informaci&oacute;n</h2>
+        <p><strong>NO vendemos tu informaci&oacute;n personal.</strong></p>
+        <p>Podemos compartir informaci&oacute;n limitada con:</p>
+        <table>
+            <tr><th>Tercero</th><th>Prop&oacute;sito</th><th>Datos Compartidos</th></tr>
+            <tr><td>Google AdMob</td><td>Publicidad</td><td>Identificadores de anuncios, datos del dispositivo</td></tr>
+            <tr><td>Apple/Google</td><td>Distribuci&oacute;n de la app</td><td>Datos de instalaci&oacute;n an&oacute;nimos</td></tr>
+        </table>
+
+        <h2>6. Seguridad de los Datos</h2>
+        <p>Implementamos medidas de seguridad t&eacute;cnicas y organizativas para proteger la informaci&oacute;n:</p>
+        <ul>
+            <li>Los datos del juego se almacenan localmente en tu dispositivo</li>
+            <li>No mantenemos servidores con informaci&oacute;n de usuarios</li>
+            <li>Las comunicaciones con servicios de terceros usan cifrado (HTTPS/TLS)</li>
+        </ul>
+
+        <h2>7. Privacidad de los Ni&ntilde;os</h2>
+        <div class="callout callout-danger">
+            <p>Rally Team Manager <strong>NO est&aacute; dirigido a ni&ntilde;os menores de 13 a&ntilde;os</strong>. No recopilamos intencionalmente informaci&oacute;n personal de ni&ntilde;os menores de 13 a&ntilde;os.</p>
+            <p>Si eres padre o tutor y crees que tu hijo nos ha proporcionado informaci&oacute;n personal, cont&aacute;ctanos para que podamos tomar las medidas necesarias.</p>
+        </div>
+        <p><strong>Clasificaci&oacute;n por Edad:</strong></p>
+        <ul>
+            <li><strong>iOS:</strong> 4+ (puede contener publicidad)</li>
+            <li><strong>Android:</strong> PEGI 3 / Everyone (contiene anuncios)</li>
+        </ul>
+
+        <h2>8. Tus Derechos</h2>
+
+        <h3>8.1 Residentes de la Uni&oacute;n Europea (GDPR)</h3>
+        <ul>
+            <li><strong>Acceso:</strong> Solicitar qu&eacute; datos tenemos sobre ti</li>
+            <li><strong>Rectificaci&oacute;n:</strong> Corregir datos inexactos</li>
+            <li><strong>Eliminaci&oacute;n:</strong> Solicitar que eliminemos tus datos</li>
+            <li><strong>Portabilidad:</strong> Recibir tus datos en formato estructurado</li>
+            <li><strong>Oposici&oacute;n:</strong> Oponerte al procesamiento de tus datos</li>
+            <li><strong>Restricci&oacute;n:</strong> Limitar c&oacute;mo usamos tus datos</li>
+        </ul>
+
+        <h3>8.2 Residentes de California (CCPA)</h3>
+        <ul>
+            <li><strong>Conocer:</strong> Qu&eacute; informaci&oacute;n personal recopilamos</li>
+            <li><strong>Eliminar:</strong> Solicitar eliminaci&oacute;n de informaci&oacute;n personal</li>
+            <li><strong>Optar por no participar:</strong> En la venta de informaci&oacute;n personal (no vendemos datos)</li>
+            <li><strong>No discriminaci&oacute;n:</strong> No ser&aacute;s discriminado por ejercer tus derechos</li>
+        </ul>
+
+        <h3>8.3 C&oacute;mo Ejercer tus Derechos</h3>
+        <p>Para ejercer cualquiera de estos derechos, cont&aacute;ctanos en: <strong>cre8labs.dev@gmail.com</strong></p>
+        <p>Responderemos a tu solicitud dentro de los 30 d&iacute;as siguientes.</p>
+
+        <h2>9. Retenci&oacute;n de Datos</h2>
+        <ul>
+            <li><strong>Datos locales del juego:</strong> Se mantienen hasta que desinstales la aplicaci&oacute;n</li>
+            <li><strong>Datos de publicidad:</strong> Gestionados por Google seg&uacute;n su pol&iacute;tica de retenci&oacute;n</li>
+            <li><strong>Datos de an&aacute;lisis:</strong> Agregados y an&oacute;nimos, retenidos indefinidamente</li>
+        </ul>
+
+        <h2>10. Transferencias Internacionales</h2>
+        <p>Los datos procesados por Google AdMob pueden transferirse y almacenarse en servidores ubicados fuera de tu pa&iacute;s de residencia, incluyendo Estados Unidos.</p>
+        <p>Google cumple con marcos de transferencia de datos aplicables, incluyendo las Cl&aacute;usulas Contractuales Est&aacute;ndar de la UE.</p>
+
+        <h2>11. Cambios a esta Pol&iacute;tica</h2>
+        <p>Podemos actualizar esta Pol&iacute;tica de Privacidad peri&oacute;dicamente. Te notificaremos de cambios significativos mediante:</p>
+        <ul>
+            <li>Actualizaci&oacute;n de la fecha de "&Uacute;ltima actualizaci&oacute;n" en esta p&aacute;gina</li>
+            <li>Notificaci&oacute;n dentro de la aplicaci&oacute;n (para cambios materiales)</li>
+        </ul>
+
+        <h2>12. Contacto</h2>
+        <div class="contact-box">
+            <p>Si tienes preguntas, comentarios o solicitudes relacionadas con esta Pol&iacute;tica de Privacidad, puedes contactarnos en:</p>
+            <p><strong>Email:</strong> <a href="mailto:cre8labs.dev@gmail.com">cre8labs.dev@gmail.com</a></p>
+            <p><strong>Desarrollador:</strong> Cre8 Labs</p>
+        </div>
+
+        <h2>13. Informaci&oacute;n Adicional por Regi&oacute;n</h2>
+
+        <h3>Para usuarios en Argentina</h3>
+        <p>Esta pol&iacute;tica cumple con la Ley de Protecci&oacute;n de Datos Personales N&deg; 25.326. La Direcci&oacute;n Nacional de Protecci&oacute;n de Datos Personales es el &oacute;rgano de control.</p>
+
+        <h3>Para usuarios en Espa&ntilde;a</h3>
+        <p>Conforme al RGPD, tienes derecho a presentar una reclamaci&oacute;n ante la Agencia Espa&ntilde;ola de Protecci&oacute;n de Datos (AEPD).</p>
+
+        <h3>Para usuarios en M&eacute;xico</h3>
+        <p>Esta pol&iacute;tica cumple con la Ley Federal de Protecci&oacute;n de Datos Personales en Posesi&oacute;n de los Particulares. El INAI es la autoridad competente.</p>
+
+        <h2>14. Consentimiento</h2>
+        <p>Al usar Rally Team Manager, consientes:</p>
+        <ol>
+            <li>La recopilaci&oacute;n y uso de informaci&oacute;n seg&uacute;n esta pol&iacute;tica</li>
+            <li>El uso de cookies y tecnolog&iacute;as similares por servicios de publicidad</li>
+            <li>La transferencia de datos a terceros proveedores de servicios</li>
+        </ol>
+        <p>Si no consientes, por favor desinstala la aplicaci&oacute;n.</p>
+
+        </div>
+
+        <footer>
+            <strong>Rally Team Manager</strong><br>
+            &copy; 2026 Cre8 Labs. <span class="lang-en">All rights reserved.</span><span class="lang-es">Todos los derechos reservados.</span>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.body.className = lang;
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+            });
+            document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+            localStorage.setItem('cre8labs-lang', lang);
+        }
+        (function() {
+            var saved = localStorage.getItem('cre8labs-lang');
+            var lang = saved || (navigator.language.startsWith('es') ? 'es' : 'en');
+            setLang(lang);
+        })();
+    </script>
+</body>
+</html>
