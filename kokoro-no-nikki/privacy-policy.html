@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Kokoro no Nikki | Cre8 Labs</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #0E1116;
+            color: #E0E0E0;
+            line-height: 1.7;
+        }
+
+        .lang-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+            display: flex;
+            gap: 4px;
+            background: #1A1F26;
+            border: 1px solid #2D3440;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        .lang-btn {
+            padding: 4px 12px;
+            border: none;
+            background: transparent;
+            color: #8A93A6;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: #FFD100;
+            color: #0E1116;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px 40px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 24px;
+        }
+
+        .breadcrumb a {
+            color: #2D6BFF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb a:hover { color: #FFD100; }
+
+        .breadcrumb span { color: #5A6370; font-size: 14px; }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #8A93A6;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FFD100;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #1A1F26;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p { margin-bottom: 14px; }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 14px;
+        }
+
+        li { margin-bottom: 6px; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #2D3440;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #1A1F26;
+            color: #FFD100;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) { background: rgba(26, 31, 38, 0.5); }
+
+        .callout {
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            border-left: 4px solid;
+        }
+
+        .callout-success {
+            background: rgba(40, 167, 69, 0.1);
+            border-color: #28a745;
+        }
+
+        .callout-warning {
+            background: rgba(255, 193, 7, 0.1);
+            border-color: #ffc107;
+        }
+
+        .callout-danger {
+            background: rgba(220, 53, 69, 0.1);
+            border-color: #dc3545;
+        }
+
+        a { color: #2D6BFF; text-decoration: none; }
+        a:hover { color: #FFD100; }
+
+        code {
+            background: #1A1F26;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .contact-box {
+            background: #1A1F26;
+            border: 1px solid #2D3440;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px 20px;
+            border-top: 1px solid #1A1F26;
+            color: #5A6370;
+            font-size: 13px;
+            margin-top: 40px;
+        }
+
+        .lang-en, .lang-es, .lang-ja { display: none; }
+        body.en .lang-en { display: block; }
+        body.es .lang-es { display: block; }
+        body.ja .lang-ja { display: block; }
+        body.en table.lang-en { display: table; }
+        body.es table.lang-es { display: table; }
+        body.ja table.lang-ja { display: table; }
+        body.en span.lang-en { display: inline; }
+        body.es span.lang-es { display: inline; }
+        body.ja span.lang-ja { display: inline; }
+        body.en div.lang-en { display: block; }
+        body.es div.lang-es { display: block; }
+        body.ja div.lang-ja { display: block; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 24px; }
+            h2 { font-size: 18px; }
+            .container { padding: 50px 16px 32px; }
+            table { font-size: 13px; }
+            th, td { padding: 8px; }
+        }
+    </style>
+</head>
+<body class="en">
+
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">&#26085;&#26412;&#35486;</button>
+    </div>
+
+    <div class="container">
+
+        <div class="breadcrumb">
+            <a href="../index.html">Cre8 Labs</a>
+            <span> / </span>
+            <span class="lang-en">Kokoro no Nikki &mdash; Privacy Policy</span>
+            <span class="lang-es">Kokoro no Nikki &mdash; Pol&iacute;tica de Privacidad</span>
+            <span class="lang-ja">Kokoro no Nikki &mdash; &#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;</span>
+        </div>
+
+        <!-- ==================== ENGLISH ==================== -->
+        <div class="lang-en">
+
+        <h1>Privacy Policy</h1>
+        <p class="subtitle"><strong>Kokoro no Nikki (&#24515;&#12398;&#26085;&#35352;)</strong> | Last updated: February 26, 2026</p>
+
+        <h2>1. Introduction</h2>
+        <p>Welcome to Kokoro no Nikki ("we", "our", or "the application"). This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our mobile journaling application.</p>
+        <p>By downloading, installing, or using Kokoro no Nikki, you accept the practices described in this policy. If you do not agree with this policy, please do not use the application.</p>
+
+        <h2>2. Information We Collect</h2>
+
+        <h3>2.1 Account Information</h3>
+        <p>When you create an account, we collect:</p>
+        <ul>
+            <li><strong>Email address</strong> &mdash; used for authentication and account recovery</li>
+            <li><strong>Display name</strong> (optional) &mdash; used to personalize your experience</li>
+            <li><strong>Authentication provider data</strong> &mdash; if you sign in via Google or Apple, we receive a unique identifier and email from the provider</li>
+        </ul>
+
+        <h3>2.2 Journal Content</h3>
+        <p>The core of Kokoro no Nikki is your journal entries. We store:</p>
+        <ul>
+            <li><strong>Text entries</strong> &mdash; what you write in your journal</li>
+            <li><strong>Voice recordings</strong> &mdash; audio files you record for transcription</li>
+            <li><strong>Emotion analysis results</strong> &mdash; emotions detected by AI from your entries</li>
+            <li><strong>Haiku compositions</strong> &mdash; poems you create in haiku mode</li>
+        </ul>
+        <div class="callout callout-success">
+            <p><strong>Your journal data is yours.</strong> Entries are stored locally on your device first (offline-first architecture). Cloud sync to our servers happens only when you are signed in and connected to the internet.</p>
+        </div>
+
+        <h3>2.3 AI Processing</h3>
+        <p>To provide emotion analysis, we send your journal text to OpenAI's API for processing:</p>
+        <ul>
+            <li>Only the text content is sent &mdash; no personal identifiers are included</li>
+            <li>OpenAI processes the text to detect emotions and generate insights</li>
+            <li>Voice recordings are transcribed via OpenAI Whisper, then the audio is not retained on external servers</li>
+        </ul>
+        <p>For more information on how OpenAI handles data: <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI Privacy Policy</a></p>
+
+        <h3>2.4 Subscription Data</h3>
+        <p>Premium subscriptions are managed through RevenueCat and the platform app stores (Apple App Store / Google Play). We receive:</p>
+        <ul>
+            <li>Subscription status (active, expired, trial)</li>
+            <li>Purchase platform (iOS or Android)</li>
+            <li>Anonymized transaction identifiers</li>
+        </ul>
+        <p>We do <strong>not</strong> collect or store your payment card details. All payment processing is handled by Apple or Google.</p>
+
+        <h3>2.5 Locally Stored Data</h3>
+        <p>The following data is stored <strong>only on your device</strong> using secure local storage:</p>
+        <ul>
+            <li>App settings and preferences (language, theme, notification time)</li>
+            <li>Onboarding responses</li>
+            <li>Cached journal entries (offline-first)</li>
+        </ul>
+
+        <h2>3. Advertising</h2>
+        <div class="callout callout-success">
+            <p><strong>Kokoro no Nikki does NOT display any advertising.</strong> We do not use AdMob, ad networks, or any tracking for advertising purposes. The application is funded through premium subscriptions.</p>
+        </div>
+
+        <h2>4. Use of Information</h2>
+        <p>We use the collected information to:</p>
+        <ol>
+            <li><strong>Provide the journaling service:</strong> Store and sync your entries across devices</li>
+            <li><strong>AI emotion analysis:</strong> Analyze your journal text to provide emotional insights</li>
+            <li><strong>Voice transcription:</strong> Convert your voice recordings to text</li>
+            <li><strong>Personalization:</strong> Customize prompts, seasonal themes, and insights based on your preferences</li>
+            <li><strong>Account management:</strong> Authenticate you and manage your subscription</li>
+        </ol>
+        <div class="callout callout-danger">
+            <p><strong>We do NOT use your information to:</strong></p>
+            <ul>
+                <li>Sell it to third parties</li>
+                <li>Display targeted advertising</li>
+                <li>Train AI models on your personal journal content</li>
+                <li>Create marketing profiles</li>
+                <li>Send unsolicited communications</li>
+            </ul>
+        </div>
+
+        <h2>5. Sharing Information</h2>
+        <p><strong>We do NOT sell your personal information.</strong></p>
+        <p>We share limited data with the following service providers, solely to operate the application:</p>
+        <table>
+            <tr><th>Third Party</th><th>Purpose</th><th>Data Shared</th></tr>
+            <tr><td>Supabase</td><td>Authentication &amp; cloud storage</td><td>Email, display name, journal entries (encrypted in transit)</td></tr>
+            <tr><td>OpenAI</td><td>Emotion analysis &amp; voice transcription</td><td>Journal text content (no personal identifiers)</td></tr>
+            <tr><td>RevenueCat</td><td>Subscription management</td><td>Anonymous user ID, purchase status</td></tr>
+            <tr><td>Apple / Google</td><td>App distribution &amp; payments</td><td>Payment processing (handled by platform)</td></tr>
+        </table>
+
+        <h2>6. Data Security</h2>
+        <p>We implement technical and organizational security measures to protect your information:</p>
+        <ul>
+            <li>All data in transit is encrypted via HTTPS/TLS</li>
+            <li>Journal entries are stored locally first with offline-first architecture</li>
+            <li>Authentication is handled via Supabase Auth with secure token management</li>
+            <li>Voice recordings are processed and not retained on external servers after transcription</li>
+            <li>Passwords are never stored in plain text</li>
+        </ul>
+
+        <h2>7. Children's Privacy</h2>
+        <div class="callout callout-danger">
+            <p>Kokoro no Nikki is <strong>NOT directed at children under 13 years of age</strong>. We do not intentionally collect personal information from children under 13.</p>
+            <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us so we can take the necessary steps.</p>
+        </div>
+
+        <h2>8. Your Rights</h2>
+
+        <h3>8.1 European Union Residents (GDPR)</h3>
+        <ul>
+            <li><strong>Access:</strong> Request what data we hold about you</li>
+            <li><strong>Rectification:</strong> Correct inaccurate data</li>
+            <li><strong>Erasure:</strong> Request deletion of your data</li>
+            <li><strong>Portability:</strong> Receive your data in a structured format</li>
+            <li><strong>Objection:</strong> Object to the processing of your data</li>
+            <li><strong>Restriction:</strong> Limit how we use your data</li>
+        </ul>
+
+        <h3>8.2 California Residents (CCPA)</h3>
+        <ul>
+            <li><strong>Know:</strong> What personal information we collect</li>
+            <li><strong>Delete:</strong> Request deletion of personal information</li>
+            <li><strong>Opt-out:</strong> Of the sale of personal information (we do not sell data)</li>
+            <li><strong>Non-discrimination:</strong> You will not be discriminated against for exercising your rights</li>
+        </ul>
+
+        <h3>8.3 Account Deletion</h3>
+        <div class="callout callout-warning">
+            <p>You can delete your account directly from the app: <strong>Settings &gt; Delete Account</strong>. This will permanently delete all your data including journal entries, profile information, and subscription records from our servers. Local data on your device will also be cleared.</p>
+        </div>
+
+        <h3>8.4 How to Exercise Your Rights</h3>
+        <p>To exercise any of these rights, you can:</p>
+        <ul>
+            <li>Use the in-app "Delete Account" feature in Settings</li>
+            <li>Contact us at: <strong>cre8labs.dev@gmail.com</strong></li>
+        </ul>
+        <p>We will respond to your request within 30 days.</p>
+
+        <h2>9. Data Retention</h2>
+        <ul>
+            <li><strong>Account data:</strong> Retained while your account is active; deleted upon account deletion</li>
+            <li><strong>Journal entries:</strong> Retained while your account is active; deleted upon account deletion</li>
+            <li><strong>Voice recordings:</strong> Processed for transcription and not retained on external servers</li>
+            <li><strong>Local device data:</strong> Retained until you uninstall the application or delete your account</li>
+            <li><strong>Subscription data:</strong> Managed by RevenueCat and Apple/Google according to their retention policies</li>
+        </ul>
+
+        <h2>10. International Transfers</h2>
+        <p>Your data may be processed on servers located outside your country of residence, including the United States, through our service providers (Supabase, OpenAI, RevenueCat).</p>
+        <p>These providers comply with applicable data transfer frameworks, including the EU Standard Contractual Clauses where required.</p>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy periodically. We will notify you of significant changes by:</p>
+        <ul>
+            <li>Updating the "Last updated" date on this page</li>
+            <li>In-app notification (for material changes)</li>
+        </ul>
+
+        <h2>12. Contact</h2>
+        <div class="contact-box">
+            <p>If you have questions, comments, or requests related to this Privacy Policy, you can contact us at:</p>
+            <p><strong>Email:</strong> <a href="mailto:cre8labs.dev@gmail.com">cre8labs.dev@gmail.com</a></p>
+            <p><strong>Developer:</strong> Cre8 Labs</p>
+        </div>
+
+        <h2>13. Additional Regional Information</h2>
+
+        <h3>For users in Argentina</h3>
+        <p>This policy complies with the Personal Data Protection Law No. 25,326. The National Directorate for Personal Data Protection is the supervisory authority.</p>
+
+        <h3>For users in Spain</h3>
+        <p>In accordance with the GDPR, you have the right to file a complaint with the Spanish Data Protection Agency (AEPD).</p>
+
+        <h3>For users in Mexico</h3>
+        <p>This policy complies with the Federal Law on Protection of Personal Data Held by Private Parties. INAI is the competent authority.</p>
+
+        <h3>For users in Japan</h3>
+        <p>This policy complies with the Act on the Protection of Personal Information (APPI). The Personal Information Protection Commission (PPC) is the competent authority.</p>
+
+        <h2>14. Consent</h2>
+        <p>By using Kokoro no Nikki, you consent to:</p>
+        <ol>
+            <li>The collection and use of information according to this policy</li>
+            <li>The processing of your journal text by AI services for emotion analysis</li>
+            <li>The transfer of data to third-party service providers as described above</li>
+        </ol>
+        <p>If you do not consent, please uninstall the application and delete your account.</p>
+
+        </div>
+
+        <!-- ==================== SPANISH ==================== -->
+        <div class="lang-es">
+
+        <h1>Pol&iacute;tica de Privacidad</h1>
+        <p class="subtitle"><strong>Kokoro no Nikki (&#24515;&#12398;&#26085;&#35352;)</strong> | &Uacute;ltima actualizaci&oacute;n: 26 de febrero de 2026</p>
+
+        <h2>1. Introducci&oacute;n</h2>
+        <p>Bienvenido a Kokoro no Nikki ("nosotros", "nuestro" o "la aplicaci&oacute;n"). Esta Pol&iacute;tica de Privacidad explica c&oacute;mo recopilamos, usamos, divulgamos y protegemos tu informaci&oacute;n cuando utilizas nuestra aplicaci&oacute;n m&oacute;vil de diario personal.</p>
+        <p>Al descargar, instalar o usar Kokoro no Nikki, aceptas las pr&aacute;cticas descritas en esta pol&iacute;tica. Si no est&aacute;s de acuerdo con esta pol&iacute;tica, por favor no uses la aplicaci&oacute;n.</p>
+
+        <h2>2. Informaci&oacute;n que Recopilamos</h2>
+
+        <h3>2.1 Informaci&oacute;n de la Cuenta</h3>
+        <p>Cuando creas una cuenta, recopilamos:</p>
+        <ul>
+            <li><strong>Correo electr&oacute;nico</strong> &mdash; utilizado para autenticaci&oacute;n y recuperaci&oacute;n de cuenta</li>
+            <li><strong>Nombre para mostrar</strong> (opcional) &mdash; utilizado para personalizar tu experiencia</li>
+            <li><strong>Datos del proveedor de autenticaci&oacute;n</strong> &mdash; si inicias sesi&oacute;n con Google o Apple, recibimos un identificador &uacute;nico y correo del proveedor</li>
+        </ul>
+
+        <h3>2.2 Contenido del Diario</h3>
+        <p>El n&uacute;cleo de Kokoro no Nikki es tu diario personal. Almacenamos:</p>
+        <ul>
+            <li><strong>Entradas de texto</strong> &mdash; lo que escribes en tu diario</li>
+            <li><strong>Grabaciones de voz</strong> &mdash; archivos de audio que grabas para transcripci&oacute;n</li>
+            <li><strong>Resultados del an&aacute;lisis emocional</strong> &mdash; emociones detectadas por IA en tus entradas</li>
+            <li><strong>Composiciones haiku</strong> &mdash; poemas que creas en modo haiku</li>
+        </ul>
+        <div class="callout callout-success">
+            <p><strong>Los datos de tu diario son tuyos.</strong> Las entradas se almacenan primero localmente en tu dispositivo (arquitectura offline-first). La sincronizaci&oacute;n en la nube con nuestros servidores ocurre solo cuando est&aacute;s conectado a internet y con sesi&oacute;n iniciada.</p>
+        </div>
+
+        <h3>2.3 Procesamiento con IA</h3>
+        <p>Para proporcionar an&aacute;lisis emocional, enviamos el texto de tu diario a la API de OpenAI:</p>
+        <ul>
+            <li>Solo se env&iacute;a el contenido de texto &mdash; no se incluyen identificadores personales</li>
+            <li>OpenAI procesa el texto para detectar emociones y generar reflexiones</li>
+            <li>Las grabaciones de voz se transcriben v&iacute;a OpenAI Whisper; el audio no se retiene en servidores externos</li>
+        </ul>
+        <p>Para m&aacute;s informaci&oacute;n sobre c&oacute;mo OpenAI maneja los datos: <a href="https://openai.com/policies/privacy-policy" target="_blank">Pol&iacute;tica de Privacidad de OpenAI</a></p>
+
+        <h3>2.4 Datos de Suscripci&oacute;n</h3>
+        <p>Las suscripciones premium se gestionan a trav&eacute;s de RevenueCat y las tiendas de aplicaciones (App Store / Google Play). Recibimos:</p>
+        <ul>
+            <li>Estado de la suscripci&oacute;n (activa, expirada, periodo de prueba)</li>
+            <li>Plataforma de compra (iOS o Android)</li>
+            <li>Identificadores de transacci&oacute;n anonimizados</li>
+        </ul>
+        <p><strong>No</strong> recopilamos ni almacenamos los datos de tu tarjeta de pago. Todo el procesamiento de pagos es manejado por Apple o Google.</p>
+
+        <h3>2.5 Datos Almacenados Localmente</h3>
+        <p>Los siguientes datos se almacenan <strong>&uacute;nicamente en tu dispositivo</strong> usando almacenamiento local seguro:</p>
+        <ul>
+            <li>Configuraci&oacute;n y preferencias de la app (idioma, tema, hora de notificaci&oacute;n)</li>
+            <li>Respuestas del onboarding</li>
+            <li>Entradas de diario en cach&eacute; (offline-first)</li>
+        </ul>
+
+        <h2>3. Publicidad</h2>
+        <div class="callout callout-success">
+            <p><strong>Kokoro no Nikki NO muestra publicidad de ning&uacute;n tipo.</strong> No usamos AdMob, redes publicitarias ni tracking con fines de publicidad. La aplicaci&oacute;n se financia mediante suscripciones premium.</p>
+        </div>
+
+        <h2>4. Uso de la Informaci&oacute;n</h2>
+        <p>Utilizamos la informaci&oacute;n recopilada para:</p>
+        <ol>
+            <li><strong>Proporcionar el servicio de diario:</strong> Almacenar y sincronizar tus entradas entre dispositivos</li>
+            <li><strong>An&aacute;lisis emocional con IA:</strong> Analizar el texto de tu diario para brindar reflexiones emocionales</li>
+            <li><strong>Transcripci&oacute;n de voz:</strong> Convertir tus grabaciones de voz a texto</li>
+            <li><strong>Personalizaci&oacute;n:</strong> Adaptar los prompts, temas estacionales y reflexiones seg&uacute;n tus preferencias</li>
+            <li><strong>Gesti&oacute;n de cuenta:</strong> Autenticarte y gestionar tu suscripci&oacute;n</li>
+        </ol>
+        <div class="callout callout-danger">
+            <p><strong>NO utilizamos tu informaci&oacute;n para:</strong></p>
+            <ul>
+                <li>Venderla a terceros</li>
+                <li>Mostrar publicidad dirigida</li>
+                <li>Entrenar modelos de IA con el contenido personal de tu diario</li>
+                <li>Crear perfiles de marketing</li>
+                <li>Enviar comunicaciones no solicitadas</li>
+            </ul>
+        </div>
+
+        <h2>5. Compartir Informaci&oacute;n</h2>
+        <p><strong>NO vendemos tu informaci&oacute;n personal.</strong></p>
+        <p>Compartimos datos limitados con los siguientes proveedores de servicios, &uacute;nicamente para operar la aplicaci&oacute;n:</p>
+        <table>
+            <tr><th>Tercero</th><th>Prop&oacute;sito</th><th>Datos Compartidos</th></tr>
+            <tr><td>Supabase</td><td>Autenticaci&oacute;n y almacenamiento en la nube</td><td>Correo, nombre, entradas de diario (cifradas en tr&aacute;nsito)</td></tr>
+            <tr><td>OpenAI</td><td>An&aacute;lisis emocional y transcripci&oacute;n de voz</td><td>Texto del diario (sin identificadores personales)</td></tr>
+            <tr><td>RevenueCat</td><td>Gesti&oacute;n de suscripciones</td><td>ID de usuario an&oacute;nimo, estado de compra</td></tr>
+            <tr><td>Apple / Google</td><td>Distribuci&oacute;n de la app y pagos</td><td>Procesamiento de pagos (manejado por la plataforma)</td></tr>
+        </table>
+
+        <h2>6. Seguridad de los Datos</h2>
+        <p>Implementamos medidas de seguridad t&eacute;cnicas y organizativas para proteger tu informaci&oacute;n:</p>
+        <ul>
+            <li>Todos los datos en tr&aacute;nsito se cifran v&iacute;a HTTPS/TLS</li>
+            <li>Las entradas de diario se almacenan primero localmente con arquitectura offline-first</li>
+            <li>La autenticaci&oacute;n se maneja v&iacute;a Supabase Auth con gesti&oacute;n segura de tokens</li>
+            <li>Las grabaciones de voz se procesan y no se retienen en servidores externos despu&eacute;s de la transcripci&oacute;n</li>
+            <li>Las contrase&ntilde;as nunca se almacenan en texto plano</li>
+        </ul>
+
+        <h2>7. Privacidad de los Ni&ntilde;os</h2>
+        <div class="callout callout-danger">
+            <p>Kokoro no Nikki <strong>NO est&aacute; dirigido a ni&ntilde;os menores de 13 a&ntilde;os</strong>. No recopilamos intencionalmente informaci&oacute;n personal de ni&ntilde;os menores de 13 a&ntilde;os.</p>
+            <p>Si eres padre o tutor y crees que tu hijo nos ha proporcionado informaci&oacute;n personal, cont&aacute;ctanos para que podamos tomar las medidas necesarias.</p>
+        </div>
+
+        <h2>8. Tus Derechos</h2>
+
+        <h3>8.1 Residentes de la Uni&oacute;n Europea (GDPR)</h3>
+        <ul>
+            <li><strong>Acceso:</strong> Solicitar qu&eacute; datos tenemos sobre ti</li>
+            <li><strong>Rectificaci&oacute;n:</strong> Corregir datos inexactos</li>
+            <li><strong>Eliminaci&oacute;n:</strong> Solicitar que eliminemos tus datos</li>
+            <li><strong>Portabilidad:</strong> Recibir tus datos en formato estructurado</li>
+            <li><strong>Oposici&oacute;n:</strong> Oponerte al procesamiento de tus datos</li>
+            <li><strong>Restricci&oacute;n:</strong> Limitar c&oacute;mo usamos tus datos</li>
+        </ul>
+
+        <h3>8.2 Residentes de California (CCPA)</h3>
+        <ul>
+            <li><strong>Conocer:</strong> Qu&eacute; informaci&oacute;n personal recopilamos</li>
+            <li><strong>Eliminar:</strong> Solicitar eliminaci&oacute;n de informaci&oacute;n personal</li>
+            <li><strong>Optar por no participar:</strong> En la venta de informaci&oacute;n personal (no vendemos datos)</li>
+            <li><strong>No discriminaci&oacute;n:</strong> No ser&aacute;s discriminado por ejercer tus derechos</li>
+        </ul>
+
+        <h3>8.3 Eliminaci&oacute;n de Cuenta</h3>
+        <div class="callout callout-warning">
+            <p>Puedes eliminar tu cuenta directamente desde la app: <strong>Configuraci&oacute;n &gt; Eliminar cuenta</strong>. Esto eliminar&aacute; permanentemente todos tus datos, incluyendo entradas del diario, informaci&oacute;n de perfil y registros de suscripci&oacute;n de nuestros servidores. Los datos locales en tu dispositivo tambi&eacute;n se borrar&aacute;n.</p>
+        </div>
+
+        <h3>8.4 C&oacute;mo Ejercer tus Derechos</h3>
+        <p>Para ejercer cualquiera de estos derechos, puedes:</p>
+        <ul>
+            <li>Usar la funci&oacute;n "Eliminar cuenta" en Configuraci&oacute;n dentro de la app</li>
+            <li>Contactarnos en: <strong>cre8labs.dev@gmail.com</strong></li>
+        </ul>
+        <p>Responderemos a tu solicitud dentro de los 30 d&iacute;as siguientes.</p>
+
+        <h2>9. Retenci&oacute;n de Datos</h2>
+        <ul>
+            <li><strong>Datos de cuenta:</strong> Se mantienen mientras tu cuenta est&eacute; activa; se eliminan al borrar la cuenta</li>
+            <li><strong>Entradas de diario:</strong> Se mantienen mientras tu cuenta est&eacute; activa; se eliminan al borrar la cuenta</li>
+            <li><strong>Grabaciones de voz:</strong> Se procesan para transcripci&oacute;n y no se retienen en servidores externos</li>
+            <li><strong>Datos locales del dispositivo:</strong> Se mantienen hasta que desinstales la app o elimines tu cuenta</li>
+            <li><strong>Datos de suscripci&oacute;n:</strong> Gestionados por RevenueCat y Apple/Google seg&uacute;n sus pol&iacute;ticas de retenci&oacute;n</li>
+        </ul>
+
+        <h2>10. Transferencias Internacionales</h2>
+        <p>Tus datos pueden ser procesados en servidores ubicados fuera de tu pa&iacute;s de residencia, incluyendo Estados Unidos, a trav&eacute;s de nuestros proveedores de servicios (Supabase, OpenAI, RevenueCat).</p>
+        <p>Estos proveedores cumplen con marcos de transferencia de datos aplicables, incluyendo las Cl&aacute;usulas Contractuales Est&aacute;ndar de la UE cuando sea necesario.</p>
+
+        <h2>11. Cambios a esta Pol&iacute;tica</h2>
+        <p>Podemos actualizar esta Pol&iacute;tica de Privacidad peri&oacute;dicamente. Te notificaremos de cambios significativos mediante:</p>
+        <ul>
+            <li>Actualizaci&oacute;n de la fecha de "&Uacute;ltima actualizaci&oacute;n" en esta p&aacute;gina</li>
+            <li>Notificaci&oacute;n dentro de la aplicaci&oacute;n (para cambios materiales)</li>
+        </ul>
+
+        <h2>12. Contacto</h2>
+        <div class="contact-box">
+            <p>Si tienes preguntas, comentarios o solicitudes relacionadas con esta Pol&iacute;tica de Privacidad, puedes contactarnos en:</p>
+            <p><strong>Email:</strong> <a href="mailto:cre8labs.dev@gmail.com">cre8labs.dev@gmail.com</a></p>
+            <p><strong>Desarrollador:</strong> Cre8 Labs</p>
+        </div>
+
+        <h2>13. Informaci&oacute;n Adicional por Regi&oacute;n</h2>
+
+        <h3>Para usuarios en Argentina</h3>
+        <p>Esta pol&iacute;tica cumple con la Ley de Protecci&oacute;n de Datos Personales N&deg; 25.326. La Direcci&oacute;n Nacional de Protecci&oacute;n de Datos Personales es el &oacute;rgano de control.</p>
+
+        <h3>Para usuarios en Espa&ntilde;a</h3>
+        <p>Conforme al RGPD, tienes derecho a presentar una reclamaci&oacute;n ante la Agencia Espa&ntilde;ola de Protecci&oacute;n de Datos (AEPD).</p>
+
+        <h3>Para usuarios en M&eacute;xico</h3>
+        <p>Esta pol&iacute;tica cumple con la Ley Federal de Protecci&oacute;n de Datos Personales en Posesi&oacute;n de los Particulares. El INAI es la autoridad competente.</p>
+
+        <h3>Para usuarios en Jap&oacute;n</h3>
+        <p>Esta pol&iacute;tica cumple con la Ley de Protecci&oacute;n de Informaci&oacute;n Personal (APPI). La Comisi&oacute;n de Protecci&oacute;n de Informaci&oacute;n Personal (PPC) es la autoridad competente.</p>
+
+        <h2>14. Consentimiento</h2>
+        <p>Al usar Kokoro no Nikki, consientes:</p>
+        <ol>
+            <li>La recopilaci&oacute;n y uso de informaci&oacute;n seg&uacute;n esta pol&iacute;tica</li>
+            <li>El procesamiento de tu texto de diario por servicios de IA para an&aacute;lisis emocional</li>
+            <li>La transferencia de datos a terceros proveedores de servicios seg&uacute;n lo descrito anteriormente</li>
+        </ol>
+        <p>Si no consientes, por favor desinstala la aplicaci&oacute;n y elimina tu cuenta.</p>
+
+        </div>
+
+        <!-- ==================== JAPANESE ==================== -->
+        <div class="lang-ja">
+
+        <h1>&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;</h1>
+        <p class="subtitle"><strong>Kokoro no Nikki (&#24515;&#12398;&#26085;&#35352;)</strong> | &#26368;&#32066;&#26356;&#26032;&#26085;: 2026&#24180;2&#26376;26&#26085;</p>
+
+        <h2>1. &#12399;&#12376;&#12417;&#12395;</h2>
+        <p>Kokoro no Nikki&#65288;&#20197;&#19979;&#12300;&#24403;&#31038;&#12301;&#12289;&#12300;&#31169;&#12383;&#12385;&#12301;&#12289;&#12414;&#12383;&#12399;&#12300;&#26412;&#12450;&#12503;&#12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#12301;&#65289;&#12408;&#12424;&#12358;&#12371;&#12381;&#12290;&#26412;&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;&#12399;&#12289;&#24403;&#31038;&#12398;&#12514;&#12496;&#12452;&#12523;&#12472;&#12515;&#12540;&#12490;&#12523;&#12450;&#12503;&#12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#12434;&#12372;&#21033;&#29992;&#12356;&#12383;&#12384;&#12367;&#38555;&#12395;&#12289;&#12362;&#23458;&#27096;&#12398;&#24773;&#22577;&#12434;&#12393;&#12398;&#12424;&#12358;&#12395;&#21454;&#38598;&#12289;&#20351;&#29992;&#12289;&#38283;&#31034;&#12289;&#20445;&#35703;&#12377;&#12427;&#12363;&#12395;&#12388;&#12356;&#12390;&#35500;&#26126;&#12377;&#12427;&#12418;&#12398;&#12391;&#12377;&#12290;</p>
+        <p>Kokoro no Nikki&#12434;&#12480;&#12454;&#12531;&#12525;&#12540;&#12489;&#12289;&#12452;&#12531;&#12473;&#12488;&#12540;&#12523;&#12289;&#12414;&#12383;&#12399;&#20351;&#29992;&#12377;&#12427;&#12371;&#12392;&#12395;&#12424;&#12426;&#12289;&#12362;&#23458;&#27096;&#12399;&#26412;&#12509;&#12522;&#12471;&#12540;&#12395;&#35352;&#36617;&#12373;&#12428;&#12383;&#24931;&#34892;&#12395;&#21516;&#24847;&#12375;&#12383;&#12418;&#12398;&#12392;&#12415;&#12394;&#12373;&#12428;&#12414;&#12377;&#12290;&#26412;&#12509;&#12522;&#12471;&#12540;&#12395;&#21516;&#24847;&#12373;&#12428;&#12394;&#12356;&#22580;&#21512;&#12399;&#12289;&#26412;&#12450;&#12503;&#12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#12434;&#20351;&#29992;&#12375;&#12394;&#12356;&#12391;&#12367;&#12384;&#12373;&#12356;&#12290;</p>
+
+        <h2>2. &#21454;&#38598;&#12377;&#12427;&#24773;&#22577;</h2>
+
+        <h3>2.1 &#12450;&#12459;&#12454;&#12531;&#12488;&#24773;&#22577;</h3>
+        <p>&#12450;&#12459;&#12454;&#12531;&#12488;&#12434;&#20316;&#25104;&#12377;&#12427;&#38555;&#12289;&#20197;&#19979;&#12398;&#24773;&#22577;&#12434;&#21454;&#38598;&#12375;&#12414;&#12377;&#65306;</p>
+        <ul>
+            <li><strong>&#12513;&#12540;&#12523;&#12450;&#12489;&#12524;&#12473;</strong> &mdash; &#35469;&#35388;&#12392;&#12450;&#12459;&#12454;&#12531;&#12488;&#22238;&#24489;&#12395;&#20351;&#29992;</li>
+            <li><strong>&#34920;&#31034;&#21517;</strong>&#65288;&#20219;&#24847;&#65289; &mdash; &#20307;&#39443;&#12398;&#12497;&#12540;&#12477;&#12490;&#12521;&#12452;&#12474;&#12395;&#20351;&#29992;</li>
+            <li><strong>&#35469;&#35388;&#12503;&#12525;&#12496;&#12452;&#12480;&#12540;&#12487;&#12540;&#12479;</strong> &mdash; Google&#12414;&#12383;&#12399;Apple&#12391;&#12469;&#12452;&#12531;&#12452;&#12531;&#12377;&#12427;&#22580;&#21512;&#12289;&#12503;&#12525;&#12496;&#12452;&#12480;&#12540;&#12363;&#12425;&#22266;&#26377;&#35672;&#21029;&#23376;&#12392;&#12513;&#12540;&#12523;&#12434;&#21463;&#12369;&#21462;&#12426;&#12414;&#12377;</li>
+        </ul>
+
+        <h3>2.2 &#26085;&#35352;&#12467;&#12531;&#12486;&#12531;&#12484;</h3>
+        <p>Kokoro no Nikki&#12398;&#26680;&#12392;&#12394;&#12427;&#12398;&#12399;&#12289;&#12362;&#23458;&#27096;&#12398;&#26085;&#35352;&#12391;&#12377;&#12290;&#20197;&#19979;&#12434;&#20445;&#23384;&#12375;&#12414;&#12377;&#65306;</p>
+        <ul>
+            <li><strong>&#12486;&#12461;&#12473;&#12488;&#12456;&#12531;&#12488;&#12522;</strong> &mdash; &#26085;&#35352;&#12395;&#26360;&#12356;&#12383;&#20869;&#23481;</li>
+            <li><strong>&#38899;&#22768;&#37682;&#38899;</strong> &mdash; &#25991;&#23383;&#36215;&#12371;&#12375;&#29992;&#12395;&#37682;&#38899;&#12375;&#12383;&#38899;&#22768;&#12501;&#12449;&#12452;&#12523;</li>
+            <li><strong>&#24863;&#24773;&#20998;&#26512;&#32080;&#26524;</strong> &mdash; AI&#12364;&#12456;&#12531;&#12488;&#12522;&#12363;&#12425;&#26908;&#20986;&#12375;&#12383;&#24863;&#24773;</li>
+            <li><strong>&#20467;&#21477;&#20316;&#21697;</strong> &mdash; &#20467;&#21477;&#12514;&#12540;&#12489;&#12391;&#20316;&#25104;&#12375;&#12383;&#35433;</li>
+        </ul>
+        <div class="callout callout-success">
+            <p><strong>&#26085;&#35352;&#12487;&#12540;&#12479;&#12399;&#12362;&#23458;&#27096;&#12398;&#12418;&#12398;&#12391;&#12377;&#12290;</strong>&#12456;&#12531;&#12488;&#12522;&#12399;&#12414;&#12378;&#12362;&#23458;&#27096;&#12398;&#12487;&#12496;&#12452;&#12473;&#12395;&#12525;&#12540;&#12459;&#12523;&#12395;&#20445;&#23384;&#12373;&#12428;&#12414;&#12377;&#65288;&#12458;&#12501;&#12521;&#12452;&#12531;&#12501;&#12449;&#12540;&#12473;&#12488;&#12450;&#12540;&#12461;&#12486;&#12463;&#12481;&#12515;&#65289;&#12290;&#12463;&#12521;&#12454;&#12489;&#12408;&#12398;&#21516;&#26399;&#12399;&#12289;&#12469;&#12452;&#12531;&#12452;&#12531;&#28168;&#12415;&#12363;&#12388;&#12452;&#12531;&#12479;&#12540;&#12493;&#12483;&#12488;&#12395;&#25509;&#32154;&#12373;&#12428;&#12390;&#12356;&#12427;&#22580;&#21512;&#12395;&#12398;&#12415;&#34892;&#12431;&#12428;&#12414;&#12377;&#12290;</p>
+        </div>
+
+        <h3>2.3 AI&#20966;&#29702;</h3>
+        <p>&#24863;&#24773;&#20998;&#26512;&#12434;&#25552;&#20379;&#12377;&#12427;&#12383;&#12417;&#12289;&#26085;&#35352;&#12398;&#12486;&#12461;&#12473;&#12488;&#12434;OpenAI&#12398;API&#12395;&#36865;&#20449;&#12375;&#12390;&#20966;&#29702;&#12375;&#12414;&#12377;&#65306;</p>
+        <ul>
+            <li>&#12486;&#12461;&#12473;&#12488;&#12467;&#12531;&#12486;&#12531;&#12484;&#12398;&#12415;&#12364;&#36865;&#20449;&#12373;&#12428;&#12414;&#12377; &mdash; &#20491;&#20154;&#35672;&#21029;&#23376;&#12399;&#21547;&#12414;&#12428;&#12414;&#12379;&#12435;</li>
+            <li>OpenAI&#12399;&#12486;&#12461;&#12473;&#12488;&#12434;&#20966;&#29702;&#12375;&#12390;&#24863;&#24773;&#12434;&#26908;&#20986;&#12375;&#12289;&#27934;&#23519;&#12434;&#29983;&#25104;&#12375;&#12414;&#12377;</li>
+            <li>&#38899;&#22768;&#37682;&#38899;&#12399;OpenAI Whisper&#12391;&#25991;&#23383;&#36215;&#12371;&#12375;&#12373;&#12428;&#12289;&#38899;&#22768;&#12399;&#22806;&#37096;&#12469;&#12540;&#12496;&#12540;&#12395;&#20445;&#25345;&#12373;&#12428;&#12414;&#12379;&#12435;</li>
+        </ul>
+        <p>OpenAI&#12398;&#12487;&#12540;&#12479;&#21462;&#12426;&#25201;&#12356;&#12395;&#12388;&#12356;&#12390;&#12398;&#35443;&#32048;&#65306;<a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;</a></p>
+
+        <h3>2.4 &#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#12487;&#12540;&#12479;</h3>
+        <p>&#12503;&#12524;&#12511;&#12450;&#12512;&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#12399;RevenueCat&#12392;&#12503;&#12521;&#12483;&#12488;&#12501;&#12457;&#12540;&#12512;&#12398;&#12450;&#12503;&#12522;&#12473;&#12488;&#12450;&#65288;App Store / Google Play&#65289;&#12434;&#36890;&#12376;&#12390;&#31649;&#29702;&#12373;&#12428;&#12414;&#12377;&#12290;&#20197;&#19979;&#12434;&#21463;&#12369;&#21462;&#12426;&#12414;&#12377;&#65306;</p>
+        <ul>
+            <li>&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#12473;&#12486;&#12540;&#12479;&#12473;&#65288;&#12450;&#12463;&#12486;&#12451;&#12502;&#12289;&#26399;&#38480;&#20999;&#12428;&#12289;&#12488;&#12521;&#12452;&#12450;&#12523;&#65289;</li>
+            <li>&#36092;&#20837;&#12503;&#12521;&#12483;&#12488;&#12501;&#12457;&#12540;&#12512;&#65288;iOS&#12414;&#12383;&#12399;Android&#65289;</li>
+            <li>&#21311;&#21517;&#21270;&#12373;&#12428;&#12383;&#12488;&#12521;&#12531;&#12470;&#12463;&#12471;&#12519;&#12531;&#35672;&#21029;&#23376;</li>
+        </ul>
+        <p>&#12362;&#25903;&#25173;&#12356;&#12459;&#12540;&#12489;&#12398;&#35443;&#32048;&#12399;<strong>&#21454;&#38598;&#12414;&#12383;&#12399;&#20445;&#23384;&#12375;&#12414;&#12379;&#12435;</strong>&#12290;&#12377;&#12409;&#12390;&#12398;&#25903;&#25173;&#12356;&#20966;&#29702;&#12399;Apple&#12414;&#12383;&#12399;Google&#12364;&#34892;&#12356;&#12414;&#12377;&#12290;</p>
+
+        <h3>2.5 &#12525;&#12540;&#12459;&#12523;&#12395;&#20445;&#23384;&#12373;&#12428;&#12427;&#12487;&#12540;&#12479;</h3>
+        <p>&#20197;&#19979;&#12398;&#12487;&#12540;&#12479;&#12399;&#12289;&#23433;&#20840;&#12394;&#12525;&#12540;&#12459;&#12523;&#12473;&#12488;&#12524;&#12540;&#12472;&#12434;&#20351;&#29992;&#12375;&#12390;<strong>&#12362;&#23458;&#27096;&#12398;&#12487;&#12496;&#12452;&#12473;&#12395;&#12398;&#12415;</strong>&#20445;&#23384;&#12373;&#12428;&#12414;&#12377;&#65306;</p>
+        <ul>
+            <li>&#12450;&#12503;&#12522;&#12398;&#35373;&#23450;&#12392;&#12503;&#12522;&#12501;&#12449;&#12524;&#12531;&#12473;&#65288;&#35328;&#35486;&#12289;&#12486;&#12540;&#12510;&#12289;&#36890;&#30693;&#26178;&#38291;&#65289;</li>
+            <li>&#12458;&#12531;&#12508;&#12540;&#12487;&#12451;&#12531;&#12464;&#12398;&#22238;&#31572;</li>
+            <li>&#12461;&#12515;&#12483;&#12471;&#12517;&#12373;&#12428;&#12383;&#26085;&#35352;&#12456;&#12531;&#12488;&#12522;&#65288;&#12458;&#12501;&#12521;&#12452;&#12531;&#12501;&#12449;&#12540;&#12473;&#12488;&#65289;</li>
+        </ul>
+
+        <h2>3. &#24195;&#21578;</h2>
+        <div class="callout callout-success">
+            <p><strong>Kokoro no Nikki&#12399;&#24195;&#21578;&#12434;&#19968;&#20999;&#34920;&#31034;&#12375;&#12414;&#12379;&#12435;&#12290;</strong>AdMob&#12289;&#24195;&#21578;&#12493;&#12483;&#12488;&#12527;&#12540;&#12463;&#12289;&#12414;&#12383;&#12399;&#24195;&#21578;&#30446;&#30340;&#12398;&#12488;&#12521;&#12483;&#12461;&#12531;&#12464;&#12399;&#20351;&#29992;&#12375;&#12390;&#12356;&#12414;&#12379;&#12435;&#12290;&#26412;&#12450;&#12503;&#12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#12399;&#12503;&#12524;&#12511;&#12450;&#12512;&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#12395;&#12424;&#12387;&#12390;&#36939;&#21942;&#12373;&#12428;&#12390;&#12356;&#12414;&#12377;&#12290;</p>
+        </div>
+
+        <h2>4. &#24773;&#22577;&#12398;&#20351;&#29992;</h2>
+        <p>&#24403;&#31038;&#12399;&#21454;&#38598;&#12375;&#12383;&#24773;&#22577;&#12434;&#20197;&#19979;&#12398;&#30446;&#30340;&#12391;&#20351;&#29992;&#12375;&#12414;&#12377;&#65306;</p>
+        <ol>
+            <li><strong>&#12472;&#12515;&#12540;&#12490;&#12523;&#12469;&#12540;&#12499;&#12473;&#12398;&#25552;&#20379;&#65306;</strong> &#12487;&#12496;&#12452;&#12473;&#38291;&#12391;&#12456;&#12531;&#12488;&#12522;&#12434;&#20445;&#23384;&#12539;&#21516;&#26399;</li>
+            <li><strong>AI&#24863;&#24773;&#20998;&#26512;&#65306;</strong> &#26085;&#35352;&#12398;&#12486;&#12461;&#12473;&#12488;&#12434;&#20998;&#26512;&#12375;&#12390;&#24863;&#24773;&#30340;&#12394;&#27934;&#23519;&#12434;&#25552;&#20379;</li>
+            <li><strong>&#38899;&#22768;&#25991;&#23383;&#36215;&#12371;&#12375;&#65306;</strong> &#38899;&#22768;&#37682;&#38899;&#12434;&#12486;&#12461;&#12473;&#12488;&#12395;&#22793;&#25563;</li>
+            <li><strong>&#12497;&#12540;&#12477;&#12490;&#12521;&#12452;&#12474;&#65306;</strong> &#12503;&#12525;&#12531;&#12503;&#12488;&#12289;&#23395;&#31680;&#12486;&#12540;&#12510;&#12289;&#27934;&#23519;&#12434;&#12362;&#23458;&#27096;&#12398;&#22909;&#12415;&#12395;&#21512;&#12431;&#12379;&#12390;&#12459;&#12473;&#12479;&#12510;&#12452;&#12474;</li>
+            <li><strong>&#12450;&#12459;&#12454;&#12531;&#12488;&#31649;&#29702;&#65306;</strong> &#35469;&#35388;&#12392;&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#12398;&#31649;&#29702;</li>
+        </ol>
+        <div class="callout callout-danger">
+            <p><strong>&#24403;&#31038;&#12399;&#20197;&#19979;&#12398;&#30446;&#30340;&#12391;&#24773;&#22577;&#12434;&#20351;&#29992;&#12375;&#12414;&#12379;&#12435;&#65306;</strong></p>
+            <ul>
+                <li>&#31532;&#19977;&#32773;&#12408;&#12398;&#36009;&#22770;</li>
+                <li>&#12479;&#12540;&#12466;&#12486;&#12451;&#12531;&#12464;&#24195;&#21578;&#12398;&#34920;&#31034;</li>
+                <li>&#12362;&#23458;&#27096;&#12398;&#20491;&#20154;&#30340;&#12394;&#26085;&#35352;&#12467;&#12531;&#12486;&#12531;&#12484;&#12391;&#12398;AI&#12514;&#12487;&#12523;&#12398;&#12488;&#12524;&#12540;&#12491;&#12531;&#12464;</li>
+                <li>&#12510;&#12540;&#12465;&#12486;&#12451;&#12531;&#12464;&#12503;&#12525;&#12501;&#12449;&#12452;&#12523;&#12398;&#20316;&#25104;</li>
+                <li>&#26410;&#25215;&#35582;&#12398;&#36890;&#20449;&#12398;&#36865;&#20449;</li>
+            </ul>
+        </div>
+
+        <h2>5. &#24773;&#22577;&#12398;&#20849;&#26377;</h2>
+        <p><strong>&#24403;&#31038;&#12399;&#12362;&#23458;&#27096;&#12398;&#20491;&#20154;&#24773;&#22577;&#12434;&#36009;&#22770;&#12375;&#12414;&#12379;&#12435;&#12290;</strong></p>
+        <p>&#12450;&#12503;&#12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#12434;&#36939;&#21942;&#12377;&#12427;&#12383;&#12417;&#12395;&#12398;&#12415;&#12289;&#20197;&#19979;&#12398;&#12469;&#12540;&#12499;&#12473;&#12503;&#12525;&#12496;&#12452;&#12480;&#12540;&#12392;&#38480;&#23450;&#30340;&#12394;&#12487;&#12540;&#12479;&#12434;&#20849;&#26377;&#12375;&#12414;&#12377;&#65306;</p>
+        <table>
+            <tr><th>&#31532;&#19977;&#32773;</th><th>&#30446;&#30340;</th><th>&#20849;&#26377;&#12487;&#12540;&#12479;</th></tr>
+            <tr><td>Supabase</td><td>&#35469;&#35388;&#12392;&#12463;&#12521;&#12454;&#12489;&#12473;&#12488;&#12524;&#12540;&#12472;</td><td>&#12513;&#12540;&#12523;&#12289;&#34920;&#31034;&#21517;&#12289;&#26085;&#35352;&#12456;&#12531;&#12488;&#12522;&#65288;&#36578;&#36865;&#20013;&#26263;&#21495;&#21270;&#65289;</td></tr>
+            <tr><td>OpenAI</td><td>&#24863;&#24773;&#20998;&#26512;&#12392;&#38899;&#22768;&#25991;&#23383;&#36215;&#12371;&#12375;</td><td>&#26085;&#35352;&#12486;&#12461;&#12473;&#12488;&#65288;&#20491;&#20154;&#35672;&#21029;&#23376;&#12394;&#12375;&#65289;</td></tr>
+            <tr><td>RevenueCat</td><td>&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#31649;&#29702;</td><td>&#21311;&#21517;&#12518;&#12540;&#12470;&#12540;ID&#12289;&#36092;&#20837;&#12473;&#12486;&#12540;&#12479;&#12473;</td></tr>
+            <tr><td>Apple / Google</td><td>&#12450;&#12503;&#12522;&#37197;&#20449;&#12392;&#25903;&#25173;&#12356;</td><td>&#25903;&#25173;&#12356;&#20966;&#29702;&#65288;&#12503;&#12521;&#12483;&#12488;&#12501;&#12457;&#12540;&#12512;&#12364;&#20966;&#29702;&#65289;</td></tr>
+        </table>
+
+        <h2>6. &#12487;&#12540;&#12479;&#12398;&#12475;&#12461;&#12517;&#12522;&#12486;&#12451;</h2>
+        <p>&#24403;&#31038;&#12399;&#24773;&#22577;&#12434;&#20445;&#35703;&#12377;&#12427;&#12383;&#12417;&#12395;&#25216;&#34899;&#30340;&#12362;&#12424;&#12403;&#32068;&#32340;&#30340;&#12394;&#12475;&#12461;&#12517;&#12522;&#12486;&#12451;&#23550;&#31574;&#12434;&#23455;&#26045;&#12375;&#12390;&#12356;&#12414;&#12377;&#65306;</p>
+        <ul>
+            <li>&#36578;&#36865;&#20013;&#12398;&#12377;&#12409;&#12390;&#12398;&#12487;&#12540;&#12479;&#12399;HTTPS/TLS&#12391;&#26263;&#21495;&#21270;&#12373;&#12428;&#12414;&#12377;</li>
+            <li>&#26085;&#35352;&#12456;&#12531;&#12488;&#12522;&#12399;&#12458;&#12501;&#12521;&#12452;&#12531;&#12501;&#12449;&#12540;&#12473;&#12488;&#12450;&#12540;&#12461;&#12486;&#12463;&#12481;&#12515;&#12391;&#12414;&#12378;&#12525;&#12540;&#12459;&#12523;&#12395;&#20445;&#23384;&#12373;&#12428;&#12414;&#12377;</li>
+            <li>&#35469;&#35388;&#12399;Supabase Auth&#12395;&#12424;&#12427;&#23433;&#20840;&#12394;&#12488;&#12540;&#12463;&#12531;&#31649;&#29702;&#12391;&#20966;&#29702;&#12373;&#12428;&#12414;&#12377;</li>
+            <li>&#38899;&#22768;&#37682;&#38899;&#12399;&#20966;&#29702;&#12373;&#12428;&#12289;&#25991;&#23383;&#36215;&#12371;&#12375;&#24460;&#12395;&#22806;&#37096;&#12469;&#12540;&#12496;&#12540;&#12395;&#20445;&#25345;&#12373;&#12428;&#12414;&#12379;&#12435;</li>
+            <li>&#12497;&#12473;&#12527;&#12540;&#12489;&#12399;&#24179;&#25991;&#12391;&#20445;&#23384;&#12373;&#12428;&#12427;&#12371;&#12392;&#12399;&#12354;&#12426;&#12414;&#12379;&#12435;</li>
+        </ul>
+
+        <h2>7. &#23376;&#12393;&#12418;&#12398;&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;</h2>
+        <div class="callout callout-danger">
+            <p>Kokoro no Nikki&#12399;<strong>13&#27507;&#26410;&#28288;&#12398;&#23376;&#12393;&#12418;&#12434;&#23550;&#35937;&#12392;&#12375;&#12390;&#12356;&#12414;&#12379;&#12435;</strong>&#12290;&#24403;&#31038;&#12399;13&#27507;&#26410;&#28288;&#12398;&#23376;&#12393;&#12418;&#12363;&#12425;&#24847;&#22259;&#30340;&#12395;&#20491;&#20154;&#24773;&#22577;&#12434;&#21454;&#38598;&#12377;&#12427;&#12371;&#12392;&#12399;&#12354;&#12426;&#12414;&#12379;&#12435;&#12290;</p>
+            <p>&#20445;&#35703;&#32773;&#12398;&#26041;&#12391;&#12289;&#12362;&#23376;&#27096;&#12364;&#24403;&#31038;&#12395;&#20491;&#20154;&#24773;&#22577;&#12434;&#25552;&#20379;&#12375;&#12383;&#12392;&#24605;&#12431;&#12428;&#12427;&#22580;&#21512;&#12399;&#12289;&#24517;&#35201;&#12394;&#25514;&#32622;&#12434;&#35611;&#12376;&#12427;&#12383;&#12417;&#12395;&#12372;&#36899;&#32097;&#12367;&#12384;&#12373;&#12356;&#12290;</p>
+        </div>
+
+        <h2>8. &#12362;&#23458;&#27096;&#12398;&#27177;&#21033;</h2>
+
+        <h3>8.1 &#27431;&#24030;&#36899;&#21512;&#23621;&#20303;&#32773;&#65288;GDPR&#65289;</h3>
+        <ul>
+            <li><strong>&#12450;&#12463;&#12475;&#12473;&#27177;&#65306;</strong> &#24403;&#31038;&#12364;&#20445;&#25345;&#12377;&#12427;&#12362;&#23458;&#27096;&#12398;&#12487;&#12540;&#12479;&#12434;&#35531;&#27714;&#12377;&#12427;&#27177;&#21033;</li>
+            <li><strong>&#35330;&#27491;&#27177;&#65306;</strong> &#19981;&#27491;&#30906;&#12394;&#12487;&#12540;&#12479;&#12434;&#20462;&#27491;&#12377;&#12427;&#27177;&#21033;</li>
+            <li><strong>&#28040;&#21435;&#27177;&#65306;</strong> &#12487;&#12540;&#12479;&#12398;&#21066;&#38500;&#12434;&#35531;&#27714;&#12377;&#12427;&#27177;&#21033;</li>
+            <li><strong>&#12509;&#12540;&#12479;&#12499;&#12522;&#12486;&#12451;&#27177;&#65306;</strong> &#27083;&#36896;&#21270;&#12373;&#12428;&#12383;&#24418;&#24335;&#12391;&#12487;&#12540;&#12479;&#12434;&#21463;&#12369;&#21462;&#12427;&#27177;&#21033;</li>
+            <li><strong>&#30064;&#35696;&#30003;&#31435;&#27177;&#65306;</strong> &#12487;&#12540;&#12479;&#12398;&#20966;&#29702;&#12395;&#30064;&#35696;&#12434;&#21809;&#12360;&#12427;&#27177;&#21033;</li>
+            <li><strong>&#21046;&#38480;&#27177;&#65306;</strong> &#24403;&#31038;&#12395;&#12424;&#12427;&#12487;&#12540;&#12479;&#12398;&#20351;&#29992;&#12434;&#21046;&#38480;&#12377;&#12427;&#27177;&#21033;</li>
+        </ul>
+
+        <h3>8.2 &#12459;&#12522;&#12501;&#12457;&#12523;&#12491;&#12450;&#24030;&#23621;&#20303;&#32773;&#65288;CCPA&#65289;</h3>
+        <ul>
+            <li><strong>&#30693;&#12427;&#27177;&#21033;&#65306;</strong> &#24403;&#31038;&#12364;&#21454;&#38598;&#12377;&#12427;&#20491;&#20154;&#24773;&#22577;&#12398;&#20869;&#23481;&#12434;&#30693;&#12427;&#27177;&#21033;</li>
+            <li><strong>&#21066;&#38500;&#27177;&#65306;</strong> &#20491;&#20154;&#24773;&#22577;&#12398;&#21066;&#38500;&#12434;&#35531;&#27714;&#12377;&#12427;&#27177;&#21033;</li>
+            <li><strong>&#12458;&#12503;&#12488;&#12450;&#12454;&#12488;&#27177;&#65306;</strong> &#20491;&#20154;&#24773;&#22577;&#12398;&#36009;&#22770;&#12434;&#12458;&#12503;&#12488;&#12450;&#12454;&#12488;&#12377;&#12427;&#27177;&#21033;&#65288;&#24403;&#31038;&#12399;&#12487;&#12540;&#12479;&#12434;&#36009;&#22770;&#12375;&#12414;&#12379;&#12435;&#65289;</li>
+            <li><strong>&#24046;&#21029;&#31105;&#27490;&#65306;</strong> &#27177;&#21033;&#12434;&#34892;&#20351;&#12375;&#12383;&#12371;&#12392;&#12395;&#12424;&#12426;&#24046;&#21029;&#12434;&#21463;&#12369;&#12394;&#12356;&#27177;&#21033;</li>
+        </ul>
+
+        <h3>8.3 &#12450;&#12459;&#12454;&#12531;&#12488;&#12398;&#21066;&#38500;</h3>
+        <div class="callout callout-warning">
+            <p>&#12450;&#12503;&#12522;&#12363;&#12425;&#30452;&#25509;&#12450;&#12459;&#12454;&#12531;&#12488;&#12434;&#21066;&#38500;&#12391;&#12365;&#12414;&#12377;&#65306;<strong>&#35373;&#23450; &gt; &#12450;&#12459;&#12454;&#12531;&#12488;&#12434;&#21066;&#38500;</strong>&#12290;&#12371;&#12428;&#12395;&#12424;&#12426;&#12289;&#26085;&#35352;&#12456;&#12531;&#12488;&#12522;&#12289;&#12503;&#12525;&#12501;&#12449;&#12452;&#12523;&#24773;&#22577;&#12289;&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#35352;&#37682;&#12434;&#21547;&#12416;&#12377;&#12409;&#12390;&#12398;&#12487;&#12540;&#12479;&#12364;&#12469;&#12540;&#12496;&#12540;&#12363;&#12425;&#27704;&#20037;&#12395;&#21066;&#38500;&#12373;&#12428;&#12414;&#12377;&#12290;&#12487;&#12496;&#12452;&#12473;&#19978;&#12398;&#12525;&#12540;&#12459;&#12523;&#12487;&#12540;&#12479;&#12418;&#12463;&#12522;&#12450;&#12373;&#12428;&#12414;&#12377;&#12290;</p>
+        </div>
+
+        <h3>8.4 &#27177;&#21033;&#12398;&#34892;&#20351;&#26041;&#27861;</h3>
+        <p>&#12371;&#12428;&#12425;&#12398;&#27177;&#21033;&#12434;&#34892;&#20351;&#12377;&#12427;&#12395;&#12399;&#65306;</p>
+        <ul>
+            <li>&#12450;&#12503;&#12522;&#20869;&#12398;&#35373;&#23450;&#12395;&#12354;&#12427;&#12300;&#12450;&#12459;&#12454;&#12531;&#12488;&#12434;&#21066;&#38500;&#12301;&#27231;&#33021;&#12434;&#20351;&#29992;</li>
+            <li>&#20197;&#19979;&#12414;&#12391;&#12372;&#36899;&#32097;&#12367;&#12384;&#12373;&#12356;&#65306;<strong>cre8labs.dev@gmail.com</strong></li>
+        </ul>
+        <p>&#24403;&#31038;&#12399;&#12362;&#23458;&#27096;&#12398;&#12522;&#12463;&#12456;&#12473;&#12488;&#12395;30&#26085;&#20197;&#20869;&#12395;&#23550;&#24540;&#12356;&#12383;&#12375;&#12414;&#12377;&#12290;</p>
+
+        <h2>9. &#12487;&#12540;&#12479;&#12398;&#20445;&#25345;</h2>
+        <ul>
+            <li><strong>&#12450;&#12459;&#12454;&#12531;&#12488;&#12487;&#12540;&#12479;&#65306;</strong> &#12450;&#12459;&#12454;&#12531;&#12488;&#12364;&#26377;&#21177;&#12394;&#38291;&#20445;&#25345;&#12373;&#12428;&#12289;&#12450;&#12459;&#12454;&#12531;&#12488;&#21066;&#38500;&#26178;&#12395;&#21066;&#38500;&#12373;&#12428;&#12414;&#12377;</li>
+            <li><strong>&#26085;&#35352;&#12456;&#12531;&#12488;&#12522;&#65306;</strong> &#12450;&#12459;&#12454;&#12531;&#12488;&#12364;&#26377;&#21177;&#12394;&#38291;&#20445;&#25345;&#12373;&#12428;&#12289;&#12450;&#12459;&#12454;&#12531;&#12488;&#21066;&#38500;&#26178;&#12395;&#21066;&#38500;&#12373;&#12428;&#12414;&#12377;</li>
+            <li><strong>&#38899;&#22768;&#37682;&#38899;&#65306;</strong> &#25991;&#23383;&#36215;&#12371;&#12375;&#12398;&#12383;&#12417;&#12395;&#20966;&#29702;&#12373;&#12428;&#12289;&#22806;&#37096;&#12469;&#12540;&#12496;&#12540;&#12395;&#12399;&#20445;&#25345;&#12373;&#12428;&#12414;&#12379;&#12435;</li>
+            <li><strong>&#12487;&#12496;&#12452;&#12473;&#12398;&#12525;&#12540;&#12459;&#12523;&#12487;&#12540;&#12479;&#65306;</strong> &#12450;&#12503;&#12522;&#12434;&#12450;&#12531;&#12452;&#12531;&#12473;&#12488;&#12540;&#12523;&#12377;&#12427;&#12363;&#12450;&#12459;&#12454;&#12531;&#12488;&#12434;&#21066;&#38500;&#12377;&#12427;&#12414;&#12391;&#20445;&#25345;&#12373;&#12428;&#12414;&#12377;</li>
+            <li><strong>&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#12487;&#12540;&#12479;&#65306;</strong> RevenueCat&#12362;&#12424;&#12403;Apple/Google&#12398;&#20445;&#25345;&#12509;&#12522;&#12471;&#12540;&#12395;&#24467;&#12387;&#12390;&#31649;&#29702;&#12373;&#12428;&#12414;&#12377;</li>
+        </ul>
+
+        <h2>10. &#22269;&#38555;&#30340;&#12394;&#12487;&#12540;&#12479;&#36578;&#36865;</h2>
+        <p>&#12362;&#23458;&#27096;&#12398;&#12487;&#12540;&#12479;&#12399;&#12289;&#24403;&#31038;&#12398;&#12469;&#12540;&#12499;&#12473;&#12503;&#12525;&#12496;&#12452;&#12480;&#12540;&#65288;Supabase&#12289;OpenAI&#12289;RevenueCat&#65289;&#12434;&#36890;&#12376;&#12390;&#12289;&#31859;&#22269;&#12434;&#21547;&#12416;&#12362;&#23458;&#27096;&#12398;&#23621;&#20303;&#22269;&#22806;&#12395;&#12354;&#12427;&#12469;&#12540;&#12496;&#12540;&#12391;&#20966;&#29702;&#12373;&#12428;&#12427;&#22580;&#21512;&#12364;&#12354;&#12426;&#12414;&#12377;&#12290;</p>
+        <p>&#12371;&#12428;&#12425;&#12398;&#12503;&#12525;&#12496;&#12452;&#12480;&#12540;&#12399;&#12289;&#24517;&#35201;&#12395;&#24540;&#12376;&#12390;EU&#27161;&#28310;&#22865;&#32004;&#26465;&#38917;&#12434;&#21547;&#12416;&#12289;&#36969;&#29992;&#12373;&#12428;&#12427;&#12487;&#12540;&#12479;&#36578;&#36865;&#12501;&#12524;&#12540;&#12512;&#12527;&#12540;&#12463;&#12395;&#28310;&#25312;&#12375;&#12390;&#12356;&#12414;&#12377;&#12290;</p>
+
+        <h2>11. &#26412;&#12509;&#12522;&#12471;&#12540;&#12398;&#22793;&#26356;</h2>
+        <p>&#24403;&#31038;&#12399;&#26412;&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;&#12434;&#23450;&#26399;&#30340;&#12395;&#26356;&#26032;&#12377;&#12427;&#22580;&#21512;&#12364;&#12354;&#12426;&#12414;&#12377;&#12290;&#37325;&#35201;&#12394;&#22793;&#26356;&#12364;&#12354;&#12427;&#22580;&#21512;&#12399;&#12289;&#20197;&#19979;&#12398;&#26041;&#27861;&#12391;&#12362;&#30693;&#12425;&#12379;&#12375;&#12414;&#12377;&#65306;</p>
+        <ul>
+            <li>&#26412;&#12506;&#12540;&#12472;&#12398;&#12300;&#26368;&#32066;&#26356;&#26032;&#26085;&#12301;&#12398;&#26356;&#26032;</li>
+            <li>&#12450;&#12503;&#12522;&#20869;&#36890;&#30693;&#65288;&#37325;&#35201;&#12394;&#22793;&#26356;&#12398;&#22580;&#21512;&#65289;</li>
+        </ul>
+
+        <h2>12. &#12362;&#21839;&#12356;&#21512;&#12431;&#12379;</h2>
+        <div class="contact-box">
+            <p>&#26412;&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;&#12395;&#38306;&#12377;&#12427;&#12372;&#36074;&#21839;&#12289;&#12467;&#12513;&#12531;&#12488;&#12289;&#12414;&#12383;&#12399;&#12522;&#12463;&#12456;&#12473;&#12488;&#12364;&#12354;&#12427;&#22580;&#21512;&#12399;&#12289;&#20197;&#19979;&#12414;&#12391;&#12372;&#36899;&#32097;&#12367;&#12384;&#12373;&#12356;&#65306;</p>
+            <p><strong>&#12513;&#12540;&#12523;&#65306;</strong> <a href="mailto:cre8labs.dev@gmail.com">cre8labs.dev@gmail.com</a></p>
+            <p><strong>&#38283;&#30330;&#32773;&#65306;</strong> Cre8 Labs</p>
+        </div>
+
+        <h2>13. &#22320;&#22495;&#21029;&#12398;&#36861;&#21152;&#24773;&#22577;</h2>
+
+        <h3>&#12450;&#12523;&#12476;&#12531;&#12481;&#12531;&#12398;&#12518;&#12540;&#12470;&#12540;&#12398;&#26041;&#12408;</h3>
+        <p>&#26412;&#12509;&#12522;&#12471;&#12540;&#12399;&#20491;&#20154;&#12487;&#12540;&#12479;&#20445;&#35703;&#27861;&#31532;25,326&#21495;&#12395;&#28310;&#25312;&#12375;&#12390;&#12356;&#12414;&#12377;&#12290;&#20491;&#20154;&#12487;&#12540;&#12479;&#20445;&#35703;&#23616;&#12364;&#30435;&#30563;&#27231;&#38306;&#12391;&#12377;&#12290;</p>
+
+        <h3>&#12473;&#12506;&#12452;&#12531;&#12398;&#12518;&#12540;&#12470;&#12540;&#12398;&#26041;&#12408;</h3>
+        <p>GDPR&#12395;&#22522;&#12389;&#12365;&#12289;&#12362;&#23458;&#27096;&#12399;&#12473;&#12506;&#12452;&#12531;&#12487;&#12540;&#12479;&#20445;&#35703;&#24193;&#65288;AEPD&#65289;&#12395;&#33510;&#24773;&#12434;&#30003;&#12375;&#31435;&#12390;&#12427;&#27177;&#21033;&#12434;&#26377;&#12375;&#12414;&#12377;&#12290;</p>
+
+        <h3>&#12513;&#12461;&#12471;&#12467;&#12398;&#12518;&#12540;&#12470;&#12540;&#12398;&#26041;&#12408;</h3>
+        <p>&#26412;&#12509;&#12522;&#12471;&#12540;&#12399;&#27665;&#38291;&#37096;&#38272;&#12364;&#20445;&#26377;&#12377;&#12427;&#20491;&#20154;&#12487;&#12540;&#12479;&#12398;&#20445;&#35703;&#12395;&#38306;&#12377;&#12427;&#36899;&#37030;&#27861;&#12395;&#28310;&#25312;&#12375;&#12390;&#12356;&#12414;&#12377;&#12290;INAI&#12364;&#31649;&#36676;&#27231;&#38306;&#12391;&#12377;&#12290;</p>
+
+        <h3>&#26085;&#26412;&#12398;&#12518;&#12540;&#12470;&#12540;&#12398;&#26041;&#12408;</h3>
+        <p>&#26412;&#12509;&#12522;&#12471;&#12540;&#12399;&#20491;&#20154;&#24773;&#22577;&#12398;&#20445;&#35703;&#12395;&#38306;&#12377;&#12427;&#27861;&#24459;&#65288;APPI&#65289;&#12395;&#28310;&#25312;&#12375;&#12390;&#12356;&#12414;&#12377;&#12290;&#20491;&#20154;&#24773;&#22577;&#20445;&#35703;&#22996;&#21729;&#20250;&#65288;PPC&#65289;&#12364;&#31649;&#36676;&#27231;&#38306;&#12391;&#12377;&#12290;</p>
+
+        <h2>14. &#21516;&#24847;</h2>
+        <p>Kokoro no Nikki&#12434;&#20351;&#29992;&#12377;&#12427;&#12371;&#12392;&#12395;&#12424;&#12426;&#12289;&#12362;&#23458;&#27096;&#12399;&#20197;&#19979;&#12395;&#21516;&#24847;&#12375;&#12383;&#12418;&#12398;&#12392;&#12415;&#12394;&#12373;&#12428;&#12414;&#12377;&#65306;</p>
+        <ol>
+            <li>&#26412;&#12509;&#12522;&#12471;&#12540;&#12395;&#22522;&#12389;&#12367;&#24773;&#22577;&#12398;&#21454;&#38598;&#12362;&#12424;&#12403;&#20351;&#29992;</li>
+            <li>&#24863;&#24773;&#20998;&#26512;&#12398;&#12383;&#12417;&#12398;AI&#12469;&#12540;&#12499;&#12473;&#12395;&#12424;&#12427;&#26085;&#35352;&#12486;&#12461;&#12473;&#12488;&#12398;&#20966;&#29702;</li>
+            <li>&#19978;&#35352;&#12398;&#36890;&#12426;&#12289;&#31532;&#19977;&#32773;&#12469;&#12540;&#12499;&#12473;&#12503;&#12525;&#12496;&#12452;&#12480;&#12540;&#12408;&#12398;&#12487;&#12540;&#12479;&#12398;&#36578;&#36865;</li>
+        </ol>
+        <p>&#21516;&#24847;&#12373;&#12428;&#12394;&#12356;&#22580;&#21512;&#12399;&#12289;&#12450;&#12503;&#12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#12434;&#12450;&#12531;&#12452;&#12531;&#12473;&#12488;&#12540;&#12523;&#12375;&#12289;&#12450;&#12459;&#12454;&#12531;&#12488;&#12434;&#21066;&#38500;&#12375;&#12390;&#12367;&#12384;&#12373;&#12356;&#12290;</p>
+
+        </div>
+
+        <footer>
+            <strong>Kokoro no Nikki (&#24515;&#12398;&#26085;&#35352;)</strong><br>
+            &copy; 2026 Cre8 Labs. <span class="lang-en">All rights reserved.</span><span class="lang-es">Todos los derechos reservados.</span><span class="lang-ja">All rights reserved.</span>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.body.className = lang;
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            });
+            document.documentElement.lang = lang;
+            localStorage.setItem('cre8labs-lang', lang);
+        }
+        (function() {
+            var saved = localStorage.getItem('cre8labs-lang');
+            var lang = saved || (navigator.language.startsWith('ja') ? 'ja' : navigator.language.startsWith('es') ? 'es' : 'en');
+            setLang(lang);
+        })();
+    </script>
+</body>
+</html>
