@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Kokoro no Nikki | Cre8 Labs</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #0E1116;
+            color: #E0E0E0;
+            line-height: 1.7;
+        }
+
+        .lang-toggle {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+            display: flex;
+            gap: 4px;
+            background: #1A1F26;
+            border: 1px solid #2D3440;
+            border-radius: 6px;
+            padding: 3px;
+        }
+
+        .lang-btn {
+            padding: 4px 12px;
+            border: none;
+            background: transparent;
+            color: #8A93A6;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: #FFD100;
+            color: #0E1116;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px 40px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 24px;
+        }
+
+        .breadcrumb a {
+            color: #2D6BFF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb a:hover { color: #FFD100; }
+
+        .breadcrumb span { color: #5A6370; font-size: 14px; }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #8A93A6;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #2D3440;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: #B0B8C4;
+        }
+
+        ol, ul {
+            margin-bottom: 14px;
+            padding-left: 24px;
+            color: #B0B8C4;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+
+        a { color: #2D6BFF; text-decoration: none; }
+        a:hover { color: #FFD100; }
+
+        .callout {
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            border-left: 4px solid;
+        }
+
+        .callout-danger {
+            background: rgba(220, 53, 69, 0.1);
+            border-color: #dc3545;
+        }
+
+        .callout-warning {
+            background: rgba(255, 193, 7, 0.1);
+            border-color: #ffc107;
+        }
+
+        .callout-success {
+            background: rgba(40, 167, 69, 0.1);
+            border-color: #28a745;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 14px;
+            border: 1px solid #2D3440;
+            color: #B0B8C4;
+        }
+
+        th {
+            background: #1A1F26;
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        td { font-size: 14px; }
+
+        .lang-en, .lang-es, .lang-ja { display: none; }
+        body.en .lang-en { display: block; }
+        body.es .lang-es { display: block; }
+        body.ja .lang-ja { display: block; }
+        body.en span.lang-en { display: inline; }
+        body.es span.lang-es { display: inline; }
+        body.ja span.lang-ja { display: inline; }
+        body.en table.lang-en { display: table; }
+        body.es table.lang-es { display: table; }
+        body.ja table.lang-ja { display: table; }
+        body.en div.lang-en { display: block; }
+        body.es div.lang-es { display: block; }
+        body.ja div.lang-ja { display: block; }
+
+        footer {
+            text-align: center;
+            padding: 24px 20px;
+            border-top: 1px solid #1A1F26;
+            color: #5A6370;
+            font-size: 13px;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 26px; }
+            .container { padding: 50px 16px 30px; }
+            th, td { padding: 8px 10px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body class="en">
+
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">&#26085;&#26412;&#35486;</button>
+    </div>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../index.html">Cre8 Labs</a>
+            <span> / </span>
+            <span>Kokoro no Nikki</span>
+        </div>
+
+        <!-- ==================== ENGLISH ==================== -->
+        <div class="lang-en">
+            <h1>Delete Your Account</h1>
+            <p class="subtitle">Kokoro no Nikki (&#24515;&#12398;&#26085;&#35352;) &mdash; by Cre8 Labs</p>
+
+            <div class="callout callout-danger">
+                <p><strong>Account deletion is permanent.</strong> Once your account is deleted, your data cannot be recovered. Please make sure you want to proceed before following the steps below.</p>
+            </div>
+
+            <h2>How to Delete Your Account</h2>
+
+            <h3>Option 1: From the App</h3>
+            <ol>
+                <li>Open <strong>Kokoro no Nikki</strong> on your device.</li>
+                <li>Go to the <strong>Settings</strong> tab (bottom navigation).</li>
+                <li>Scroll down to <strong>Account</strong> section.</li>
+                <li>Tap <strong>Delete Account</strong>.</li>
+                <li>Confirm by entering your password when prompted.</li>
+                <li>Your account and all associated data will be permanently deleted.</li>
+            </ol>
+
+            <h3>Option 2: By Email</h3>
+            <p>If you cannot access the app, send an email to <a href="mailto:cre8labs.dev@gmail.com?subject=Delete%20my%20Kokoro%20no%20Nikki%20account">cre8labs.dev@gmail.com</a> with the subject line <strong>"Delete my Kokoro no Nikki account"</strong>. Include the email address associated with your account. We will process your request within 7 business days.</p>
+
+            <h2>What Data Gets Deleted</h2>
+            <p>When you delete your account, the following data is <strong>permanently removed</strong>:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Action</th>
+                        <th>Timeframe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Account credentials (email, password)</td>
+                        <td>Deleted</td>
+                        <td>Immediate</td>
+                    </tr>
+                    <tr>
+                        <td>Journal entries (text content)</td>
+                        <td>Deleted</td>
+                        <td>Immediate</td>
+                    </tr>
+                    <tr>
+                        <td>Voice recordings (audio files)</td>
+                        <td>Deleted</td>
+                        <td>Immediate</td>
+                    </tr>
+                    <tr>
+                        <td>Attached images</td>
+                        <td>Deleted</td>
+                        <td>Immediate</td>
+                    </tr>
+                    <tr>
+                        <td>Emotion analysis results</td>
+                        <td>Deleted</td>
+                        <td>Immediate</td>
+                    </tr>
+                    <tr>
+                        <td>App preferences and settings</td>
+                        <td>Deleted</td>
+                        <td>Immediate</td>
+                    </tr>
+                    <tr>
+                        <td>Subscription status</td>
+                        <td>Deleted from our servers</td>
+                        <td>Immediate</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="callout callout-warning">
+                <p><strong>Note about subscriptions:</strong> Deleting your account does not automatically cancel your subscription. If you have an active subscription, please cancel it through <strong>Google Play Store &gt; Subscriptions</strong> or <strong>Apple App Store &gt; Subscriptions</strong> before deleting your account to avoid further charges.</p>
+            </div>
+
+            <h2>Data Retained by Third Parties</h2>
+            <p>Some data may be retained by third-party services independently of your Kokoro no Nikki account:</p>
+            <ul>
+                <li><strong>Google Play / Apple App Store:</strong> Purchase and subscription history is managed by Google/Apple and subject to their retention policies.</li>
+                <li><strong>RevenueCat:</strong> Anonymous subscription management data may be retained per their privacy policy.</li>
+            </ul>
+            <p>Kokoro no Nikki does not retain any of your personal data after account deletion.</p>
+
+            <h2>Data Stored Only on Your Device</h2>
+
+            <div class="callout callout-success">
+                <p><strong>Privacy by design:</strong> Kokoro no Nikki stores most of your data locally on your device. Journal entries, voice recordings, and images are stored on-device first. If you uninstall the app, all local data is automatically removed by your operating system.</p>
+            </div>
+
+            <h2>Contact</h2>
+            <p>If you have any questions about account deletion or data handling, contact us at:<br>
+            <a href="mailto:cre8labs.dev@gmail.com">cre8labs.dev@gmail.com</a></p>
+        </div>
+
+        <!-- ==================== SPANISH ==================== -->
+        <div class="lang-es">
+            <h1>Eliminar tu Cuenta</h1>
+            <p class="subtitle">Kokoro no Nikki (&#24515;&#12398;&#26085;&#35352;) &mdash; por Cre8 Labs</p>
+
+            <div class="callout callout-danger">
+                <p><strong>La eliminaci&oacute;n de la cuenta es permanente.</strong> Una vez eliminada tu cuenta, tus datos no podr&aacute;n ser recuperados. Aseg&uacute;rate de que deseas continuar antes de seguir los pasos a continuaci&oacute;n.</p>
+            </div>
+
+            <h2>C&oacute;mo Eliminar tu Cuenta</h2>
+
+            <h3>Opci&oacute;n 1: Desde la App</h3>
+            <ol>
+                <li>Abre <strong>Kokoro no Nikki</strong> en tu dispositivo.</li>
+                <li>Ve a la pesta&ntilde;a <strong>Ajustes</strong> (navegaci&oacute;n inferior).</li>
+                <li>Despl&aacute;zate hasta la secci&oacute;n <strong>Cuenta</strong>.</li>
+                <li>Toca <strong>Eliminar Cuenta</strong>.</li>
+                <li>Confirma ingresando tu contrase&ntilde;a cuando se solicite.</li>
+                <li>Tu cuenta y todos los datos asociados ser&aacute;n eliminados permanentemente.</li>
+            </ol>
+
+            <h3>Opci&oacute;n 2: Por Email</h3>
+            <p>Si no puedes acceder a la app, env&iacute;a un correo a <a href="mailto:cre8labs.dev@gmail.com?subject=Eliminar%20mi%20cuenta%20de%20Kokoro%20no%20Nikki">cre8labs.dev@gmail.com</a> con el asunto <strong>&ldquo;Eliminar mi cuenta de Kokoro no Nikki&rdquo;</strong>. Incluye la direcci&oacute;n de correo asociada a tu cuenta. Procesaremos tu solicitud en un plazo de 7 d&iacute;as h&aacute;biles.</p>
+
+            <h2>Qu&eacute; Datos se Eliminan</h2>
+            <p>Cuando eliminas tu cuenta, los siguientes datos se <strong>eliminan permanentemente</strong>:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Dato</th>
+                        <th>Acci&oacute;n</th>
+                        <th>Plazo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Credenciales de cuenta (email, contrase&ntilde;a)</td>
+                        <td>Eliminado</td>
+                        <td>Inmediato</td>
+                    </tr>
+                    <tr>
+                        <td>Entradas del diario (contenido de texto)</td>
+                        <td>Eliminado</td>
+                        <td>Inmediato</td>
+                    </tr>
+                    <tr>
+                        <td>Grabaciones de voz (archivos de audio)</td>
+                        <td>Eliminado</td>
+                        <td>Inmediato</td>
+                    </tr>
+                    <tr>
+                        <td>Im&aacute;genes adjuntas</td>
+                        <td>Eliminado</td>
+                        <td>Inmediato</td>
+                    </tr>
+                    <tr>
+                        <td>Resultados de an&aacute;lisis emocional</td>
+                        <td>Eliminado</td>
+                        <td>Inmediato</td>
+                    </tr>
+                    <tr>
+                        <td>Preferencias y ajustes de la app</td>
+                        <td>Eliminado</td>
+                        <td>Inmediato</td>
+                    </tr>
+                    <tr>
+                        <td>Estado de suscripci&oacute;n</td>
+                        <td>Eliminado de nuestros servidores</td>
+                        <td>Inmediato</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="callout callout-warning">
+                <p><strong>Nota sobre suscripciones:</strong> Eliminar tu cuenta no cancela autom&aacute;ticamente tu suscripci&oacute;n. Si tienes una suscripci&oacute;n activa, canc&eacute;lala a trav&eacute;s de <strong>Google Play Store &gt; Suscripciones</strong> o <strong>Apple App Store &gt; Suscripciones</strong> antes de eliminar tu cuenta para evitar cargos adicionales.</p>
+            </div>
+
+            <h2>Datos Retenidos por Terceros</h2>
+            <p>Algunos datos pueden ser retenidos por servicios de terceros de forma independiente a tu cuenta de Kokoro no Nikki:</p>
+            <ul>
+                <li><strong>Google Play / Apple App Store:</strong> El historial de compras y suscripciones es gestionado por Google/Apple y est&aacute; sujeto a sus pol&iacute;ticas de retenci&oacute;n.</li>
+                <li><strong>RevenueCat:</strong> Datos an&oacute;nimos de gesti&oacute;n de suscripciones pueden ser retenidos seg&uacute;n su pol&iacute;tica de privacidad.</li>
+            </ul>
+            <p>Kokoro no Nikki no retiene ninguno de tus datos personales despu&eacute;s de la eliminaci&oacute;n de la cuenta.</p>
+
+            <h2>Datos Almacenados Solo en tu Dispositivo</h2>
+
+            <div class="callout callout-success">
+                <p><strong>Privacidad por dise&ntilde;o:</strong> Kokoro no Nikki almacena la mayor&iacute;a de tus datos localmente en tu dispositivo. Las entradas del diario, grabaciones de voz e im&aacute;genes se guardan primero en el dispositivo. Si desinstalas la app, todos los datos locales son eliminados autom&aacute;ticamente por tu sistema operativo.</p>
+            </div>
+
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta sobre la eliminaci&oacute;n de cuenta o el manejo de datos, cont&aacute;ctanos en:<br>
+            <a href="mailto:cre8labs.dev@gmail.com">cre8labs.dev@gmail.com</a></p>
+        </div>
+
+        <!-- ==================== JAPANESE ==================== -->
+        <div class="lang-ja">
+            <h1>&#12450;&#12459;&#12454;&#12531;&#12488;&#12398;&#21066;&#38500;</h1>
+            <p class="subtitle">Kokoro no Nikki (&#24515;&#12398;&#26085;&#35352;) &mdash; Cre8 Labs</p>
+
+            <div class="callout callout-danger">
+                <p><strong>&#12450;&#12459;&#12454;&#12531;&#12488;&#12398;&#21066;&#38500;&#12399;&#27704;&#20037;&#30340;&#12391;&#12377;&#12290;</strong>&#12450;&#12459;&#12454;&#12531;&#12488;&#12434;&#21066;&#38500;&#12377;&#12427;&#12392;&#12289;&#12487;&#12540;&#12479;&#12434;&#24489;&#20803;&#12377;&#12427;&#12371;&#12392;&#12399;&#12391;&#12365;&#12414;&#12379;&#12435;&#12290;&#20197;&#19979;&#12398;&#25163;&#38918;&#12395;&#36914;&#12416;&#21069;&#12395;&#12289;&#26412;&#24403;&#12395;&#21066;&#38500;&#12375;&#12390;&#12424;&#12356;&#12363;&#12372;&#30906;&#35469;&#12367;&#12384;&#12373;&#12356;&#12290;</p>
+            </div>
+
+            <h2>&#12450;&#12459;&#12454;&#12531;&#12488;&#12398;&#21066;&#38500;&#26041;&#27861;</h2>
+
+            <h3>&#26041;&#27861;1&#65306;&#12450;&#12503;&#12522;&#12363;&#12425;</h3>
+            <ol>
+                <li>&#12487;&#12496;&#12452;&#12473;&#12391;<strong>Kokoro no Nikki</strong>&#12434;&#38283;&#12365;&#12414;&#12377;&#12290;</li>
+                <li>&#19979;&#37096;&#12490;&#12499;&#12466;&#12540;&#12471;&#12519;&#12531;&#12398;<strong>&#35373;&#23450;</strong>&#12479;&#12502;&#12434;&#12479;&#12483;&#12503;&#12375;&#12414;&#12377;&#12290;</li>
+                <li><strong>&#12450;&#12459;&#12454;&#12531;&#12488;</strong>&#12475;&#12463;&#12471;&#12519;&#12531;&#12414;&#12391;&#12473;&#12463;&#12525;&#12540;&#12523;&#12375;&#12414;&#12377;&#12290;</li>
+                <li><strong>&#12450;&#12459;&#12454;&#12531;&#12488;&#12434;&#21066;&#38500;</strong>&#12434;&#12479;&#12483;&#12503;&#12375;&#12414;&#12377;&#12290;</li>
+                <li>&#27714;&#12417;&#12425;&#12428;&#12383;&#12425;&#12497;&#12473;&#12527;&#12540;&#12489;&#12434;&#20837;&#21147;&#12375;&#12390;&#30906;&#35469;&#12375;&#12414;&#12377;&#12290;</li>
+                <li>&#12450;&#12459;&#12454;&#12531;&#12488;&#12392;&#38306;&#36899;&#12377;&#12427;&#12377;&#12409;&#12390;&#12398;&#12487;&#12540;&#12479;&#12364;&#27704;&#20037;&#12395;&#21066;&#38500;&#12373;&#12428;&#12414;&#12377;&#12290;</li>
+            </ol>
+
+            <h3>&#26041;&#27861;2&#65306;&#12513;&#12540;&#12523;&#12391;</h3>
+            <p>&#12450;&#12503;&#12522;&#12395;&#12450;&#12463;&#12475;&#12473;&#12391;&#12365;&#12394;&#12356;&#22580;&#21512;&#12399;&#12289;<a href="mailto:cre8labs.dev@gmail.com?subject=Kokoro%20no%20Nikki%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E5%89%8A%E9%99%A4%E4%BE%9D%E9%A0%BC">cre8labs.dev@gmail.com</a>&#12395;&#20214;&#21517;<strong>&#12300;Kokoro no Nikki&#12450;&#12459;&#12454;&#12531;&#12488;&#21066;&#38500;&#20381;&#38972;&#12301;</strong>&#12391;&#12513;&#12540;&#12523;&#12434;&#12362;&#36865;&#12426;&#12367;&#12384;&#12373;&#12356;&#12290;&#12450;&#12459;&#12454;&#12531;&#12488;&#12395;&#38306;&#36899;&#12377;&#12427;&#12513;&#12540;&#12523;&#12450;&#12489;&#12524;&#12473;&#12434;&#35352;&#36617;&#12375;&#12390;&#12367;&#12384;&#12373;&#12356;&#12290;7&#21942;&#26989;&#26085;&#20197;&#20869;&#12395;&#20966;&#29702;&#12356;&#12383;&#12375;&#12414;&#12377;&#12290;</p>
+
+            <h2>&#21066;&#38500;&#12373;&#12428;&#12427;&#12487;&#12540;&#12479;</h2>
+            <p>&#12450;&#12459;&#12454;&#12531;&#12488;&#12434;&#21066;&#38500;&#12377;&#12427;&#12392;&#12289;&#20197;&#19979;&#12398;&#12487;&#12540;&#12479;&#12364;<strong>&#27704;&#20037;&#12395;&#21066;&#38500;</strong>&#12373;&#12428;&#12414;&#12377;&#65306;</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>&#12487;&#12540;&#12479;&#12398;&#31278;&#39006;</th>
+                        <th>&#20966;&#29702;</th>
+                        <th>&#26399;&#38291;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&#12450;&#12459;&#12454;&#12531;&#12488;&#24773;&#22577;&#65288;&#12513;&#12540;&#12523;&#12289;&#12497;&#12473;&#12527;&#12540;&#12489;&#65289;</td>
+                        <td>&#21066;&#38500;</td>
+                        <td>&#21363;&#26178;</td>
+                    </tr>
+                    <tr>
+                        <td>&#26085;&#35352;&#12456;&#12531;&#12488;&#12522;&#12540;&#65288;&#12486;&#12461;&#12473;&#12488;&#65289;</td>
+                        <td>&#21066;&#38500;</td>
+                        <td>&#21363;&#26178;</td>
+                    </tr>
+                    <tr>
+                        <td>&#38899;&#22768;&#37682;&#38899;&#65288;&#12458;&#12540;&#12487;&#12451;&#12458;&#12501;&#12449;&#12452;&#12523;&#65289;</td>
+                        <td>&#21066;&#38500;</td>
+                        <td>&#21363;&#26178;</td>
+                    </tr>
+                    <tr>
+                        <td>&#28155;&#20184;&#30011;&#20687;</td>
+                        <td>&#21066;&#38500;</td>
+                        <td>&#21363;&#26178;</td>
+                    </tr>
+                    <tr>
+                        <td>&#24863;&#24773;&#20998;&#26512;&#32080;&#26524;</td>
+                        <td>&#21066;&#38500;</td>
+                        <td>&#21363;&#26178;</td>
+                    </tr>
+                    <tr>
+                        <td>&#12450;&#12503;&#12522;&#12398;&#35373;&#23450;&#12392;&#29872;&#22659;&#35373;&#23450;</td>
+                        <td>&#21066;&#38500;</td>
+                        <td>&#21363;&#26178;</td>
+                    </tr>
+                    <tr>
+                        <td>&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#29366;&#24907;</td>
+                        <td>&#12469;&#12540;&#12496;&#12540;&#12363;&#12425;&#21066;&#38500;</td>
+                        <td>&#21363;&#26178;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="callout callout-warning">
+                <p><strong>&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#12395;&#12388;&#12356;&#12390;&#65306;</strong>&#12450;&#12459;&#12454;&#12531;&#12488;&#12434;&#21066;&#38500;&#12375;&#12390;&#12418;&#12289;&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#12399;&#33258;&#21205;&#30340;&#12395;&#12461;&#12515;&#12531;&#12475;&#12523;&#12373;&#12428;&#12414;&#12379;&#12435;&#12290;&#26377;&#21177;&#12394;&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#12364;&#12354;&#12427;&#22580;&#21512;&#12399;&#12289;&#12450;&#12459;&#12454;&#12531;&#12488;&#21066;&#38500;&#21069;&#12395;<strong>Google Play&#12473;&#12488;&#12450; &gt; &#23450;&#26399;&#36092;&#20837;</strong>&#12414;&#12383;&#12399;<strong>Apple App Store &gt; &#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;</strong>&#12363;&#12425;&#12461;&#12515;&#12531;&#12475;&#12523;&#12375;&#12390;&#12367;&#12384;&#12373;&#12356;&#12290;</p>
+            </div>
+
+            <h2>&#31532;&#19977;&#32773;&#12364;&#20445;&#25345;&#12377;&#12427;&#12487;&#12540;&#12479;</h2>
+            <p>&#19968;&#37096;&#12398;&#12487;&#12540;&#12479;&#12399;&#12289;Kokoro no Nikki&#12398;&#12450;&#12459;&#12454;&#12531;&#12488;&#12392;&#12399;&#29420;&#31435;&#12375;&#12390;&#31532;&#19977;&#32773;&#12469;&#12540;&#12499;&#12473;&#12395;&#12424;&#12387;&#12390;&#20445;&#25345;&#12373;&#12428;&#12427;&#22580;&#21512;&#12364;&#12354;&#12426;&#12414;&#12377;&#65306;</p>
+            <ul>
+                <li><strong>Google Play / Apple App Store&#65306;</strong>&#36092;&#20837;&#12362;&#12424;&#12403;&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#23653;&#27508;&#12399;Google/Apple&#12364;&#31649;&#29702;&#12375;&#12289;&#21508;&#31038;&#12398;&#20445;&#25345;&#12509;&#12522;&#12471;&#12540;&#12395;&#24467;&#12356;&#12414;&#12377;&#12290;</li>
+                <li><strong>RevenueCat&#65306;</strong>&#21311;&#21517;&#12398;&#12469;&#12502;&#12473;&#12463;&#12522;&#12503;&#12471;&#12519;&#12531;&#31649;&#29702;&#12487;&#12540;&#12479;&#12364;&#21508;&#31038;&#12398;&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;&#12395;&#22522;&#12389;&#12356;&#12390;&#20445;&#25345;&#12373;&#12428;&#12427;&#22580;&#21512;&#12364;&#12354;&#12426;&#12414;&#12377;&#12290;</li>
+            </ul>
+            <p>Kokoro no Nikki&#12399;&#12450;&#12459;&#12454;&#12531;&#12488;&#21066;&#38500;&#24460;&#12289;&#12362;&#23458;&#27096;&#12398;&#20491;&#20154;&#12487;&#12540;&#12479;&#12434;&#19968;&#20999;&#20445;&#25345;&#12375;&#12414;&#12379;&#12435;&#12290;</p>
+
+            <h2>&#12487;&#12496;&#12452;&#12473;&#12395;&#12398;&#12415;&#20445;&#23384;&#12373;&#12428;&#12427;&#12487;&#12540;&#12479;</h2>
+
+            <div class="callout callout-success">
+                <p><strong>&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12496;&#12452;&#12487;&#12470;&#12452;&#12531;&#65306;</strong>Kokoro no Nikki&#12399;&#12411;&#12392;&#12435;&#12393;&#12398;&#12487;&#12540;&#12479;&#12434;&#12487;&#12496;&#12452;&#12473;&#12395;&#12525;&#12540;&#12459;&#12523;&#20445;&#23384;&#12375;&#12414;&#12377;&#12290;&#26085;&#35352;&#12456;&#12531;&#12488;&#12522;&#12540;&#12289;&#38899;&#22768;&#37682;&#38899;&#12289;&#30011;&#20687;&#12399;&#12414;&#12378;&#12487;&#12496;&#12452;&#12473;&#12395;&#20445;&#23384;&#12373;&#12428;&#12414;&#12377;&#12290;&#12450;&#12503;&#12522;&#12434;&#12450;&#12531;&#12452;&#12531;&#12473;&#12488;&#12540;&#12523;&#12377;&#12427;&#12392;&#12289;&#12377;&#12409;&#12390;&#12398;&#12525;&#12540;&#12459;&#12523;&#12487;&#12540;&#12479;&#12399;&#12458;&#12506;&#12524;&#12540;&#12486;&#12451;&#12531;&#12464;&#12471;&#12473;&#12486;&#12512;&#12395;&#12424;&#12387;&#12390;&#33258;&#21205;&#30340;&#12395;&#21066;&#38500;&#12373;&#12428;&#12414;&#12377;&#12290;</p>
+            </div>
+
+            <h2>&#12362;&#21839;&#12356;&#21512;&#12431;&#12379;</h2>
+            <p>&#12450;&#12459;&#12454;&#12531;&#12488;&#12398;&#21066;&#38500;&#12420;&#12487;&#12540;&#12479;&#12398;&#21462;&#12426;&#25201;&#12356;&#12395;&#12388;&#12356;&#12390;&#12372;&#36074;&#21839;&#12364;&#12354;&#12427;&#22580;&#21512;&#12399;&#12289;&#20197;&#19979;&#12414;&#12391;&#12362;&#21839;&#12356;&#21512;&#12431;&#12379;&#12367;&#12384;&#12373;&#12356;&#65306;<br>
+            <a href="mailto:cre8labs.dev@gmail.com">cre8labs.dev@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Cre8 Labs. All rights reserved.
+    </footer>
+
+    <script>
+    function setLang(lang) {
+        document.body.className = lang;
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+        document.documentElement.lang = lang;
+        localStorage.setItem('cre8labs-lang', lang);
+    }
+    (function() {
+        var saved = localStorage.getItem('cre8labs-lang');
+        var lang = saved || (navigator.language.startsWith('ja') ? 'ja' : navigator.language.startsWith('es') ? 'es' : 'en');
+        setLang(lang);
+    })();
+    </script>
+</body>
+</html>
